@@ -3,7 +3,7 @@
 
 @section('head_style')
     <!-- bootstrap-toggle -->
-    <link rel="stylesheet" href="{{ asset('public/backend/bootstrap-toggle/css/bootstrap-toggle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/bootstrap-toggle/css/bootstrap-toggle.min.css') }}">
 @endsection
 
 @section('page_content')
@@ -119,13 +119,13 @@
 @push('extra_body_scripts')
 
 <!-- jquery.validate -->
-<script src="{{ asset('public/dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 
 <!-- jquery.validate additional-methods -->
-<script src="{{ asset('public/dist/js/jquery-validation-1.17.0/dist/additional-methods.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery-validation-1.17.0/dist/additional-methods.min.js') }}" type="text/javascript"></script>
 
 <!-- bootstrap-toggle -->
-<script src="{{ asset('public/backend/bootstrap-toggle/js/bootstrap-toggle.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('backend/bootstrap-toggle/js/bootstrap-toggle.min.js') }}" type="text/javascript"></script>
 
 <!-- read-file-on-change -->
 @include('common.read-file-on-change')

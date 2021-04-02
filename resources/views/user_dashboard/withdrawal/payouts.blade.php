@@ -1,7 +1,7 @@
 @extends('user_dashboard.layouts.app')
 @section('css')
     <!-- sweetalert -->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/user_dashboard/css/sweetalert.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user_dashboard/css/sweetalert.css')}}">
 @endsection
 @section('content')
     <section class="section-06 history padding-30">
@@ -100,7 +100,7 @@
 @endsection
 
 @section('js')
-<script src="{{asset('public/user_dashboard/js/sweetalert.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/sweetalert.min.js')}}" type="text/javascript"></script>
 <script>
     $(document).ready(function()
     {

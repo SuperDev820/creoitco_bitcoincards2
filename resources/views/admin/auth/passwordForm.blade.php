@@ -21,20 +21,20 @@ $logo = getCompanyLogoWithoutSession();
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="{{ asset('public/backend/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/bootstrap/dist/css/bootstrap.min.css') }}">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/backend/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/font-awesome-4.7.0/css/font-awesome.min.css')}}">
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('public/dist/css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dist/css/AdminLTE.min.css') }}">
 
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{ asset('public/backend/iCheck/square/blue.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/iCheck/square/blue.css') }}">
 
     <!---favicon-->
     @if (!empty(getfavicon()))
-        <link rel="shortcut icon" href="{{asset('public/images/logos/'.getfavicon())}}" />
+        <link rel="shortcut icon" href="{{asset('images/logos/'.getfavicon())}}" />
     @endif
 
 </head>
@@ -43,7 +43,7 @@ $logo = getCompanyLogoWithoutSession();
 <div class="login-box">
     <div class="login-logo">
         @if(!empty($logo))
-            <a href="{{ url('admin/') }}"><img src='{{asset('public/images/logos/'.$logo)}}' class="img-responsive" width="282" height="63" style="width:75%; margin:auto;"></a>
+            <a href="{{ url('admin/') }}"><img src='{{asset('images/logos/'.$logo)}}' class="img-responsive" width="282" height="63" style="width:75%; margin:auto;"></a>
         @else
             <img src='{{ url('public/uploads/userPic/default-logo.jpg') }}' class="img-responsive" width="282" height="63" style="width:75%; margin:auto;">
         @endif
@@ -79,12 +79,12 @@ $logo = getCompanyLogoWithoutSession();
 <!-- /.login-box -->
 
 <!-- jQuery 3 -->
-<script src="{{ asset('public/backend/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ asset('backend/jquery/dist/jquery.min.js') }}"></script>
 <!-- Bootstrap 3.3.5 -->
-<script src="{{ asset('public/backend/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('backend/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
 <!-- jquery.validate -->
-<script src="{{ asset('public/dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 
 <script type="text/javascript">
 

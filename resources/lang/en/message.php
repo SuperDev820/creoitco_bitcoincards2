@@ -357,6 +357,7 @@ return [
         'nav-menu'      => [
             'dashboard'    => 'Dashboard',
             'transactions' => 'Transactions',
+            'cryptocards' => 'Cryptocards',
             'send-req'     => 'Send/Request',
             'send-to-bank' => 'Send To Bank',
             'merchants'    => 'Merchants',
@@ -378,6 +379,7 @@ return [
             'amount'           => 'Amount',
             'view-all'         => 'View All',
             'no-transaction'   => 'No transaction found!',
+            'no-cryptocard'   => 'No cryptocard found!',
 
             /**
              * Common static's in transaction dropdown
@@ -580,6 +582,11 @@ return [
             'blocked'         => 'Cancelled',
             'refund'          => 'Refunded',
             'open-dispute'    => 'Open Dispute',
+        ],
+        'cryptocard'   => [
+            'all-status'      => 'All Status',
+            'activate'      => 'Activate',
+            'inactivate'      => 'Inactivate',
         ],
         'exchange'      => [
             'left-top'    => [

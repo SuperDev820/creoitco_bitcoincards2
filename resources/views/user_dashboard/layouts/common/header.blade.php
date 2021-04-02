@@ -11,7 +11,7 @@ $logo = getCompanyLogoWithoutSession(); //direct query
         <div class="container">
             @if (isset($logo))
                 <a style="height: 45px;width: 157px;overflow: hidden;"  class="navbar-brand" href="{{url('/')}}">
-                    <img src="{{asset('public/images/logos/'.$logo)}}" alt="logo" class="img-fluid">
+                    <img src="{{asset('images/logos/'.$logo)}}" alt="logo" class="img-fluid">
                 </a>
             @else
                 <a style="height: 45px;width: 157px;overflow: hidden;"  class="navbar-brand" href="{{url('/')}}">
@@ -112,6 +112,10 @@ $logo = getCompanyLogoWithoutSession(); //direct query
 
                 @if(Common::has_permission(auth()->id(),'manage_transaction'))
                     <li class="<?= isset($menu) && ($menu == 'transactions') ? 'active' : '' ?>"><a href="{{url('/transactions')}}"><i class="fa fa-list"></i>@lang('message.dashboard.nav-menu.transactions')</a></li>
+                @endif
+
+                @if(Common::has_permission(auth()->id(),'manage_cryptocard'))
+                    <li class="<?= isset($menu) && ($menu == 'cryptocards') ? 'active' : '' ?>"><a href="{{url('/cryptocards')}}"><i class="fa fa-credit-card"></i>@lang('message.dashboard.nav-menu.cryptocards')</a></li>
                 @endif
 
                 @if(Common::has_permission(auth()->id(),'manage_transfer'))

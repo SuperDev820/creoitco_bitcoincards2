@@ -1,8 +1,8 @@
-<script src="{{asset('public/frontend/js/jquery.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/frontend/js/bootstrap.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/frontend/js/jquery.waypoints.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/frontend/js/main.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/frontend/js/moment.js')}}" type="text/javascript"></script>
+<script src="{{asset('frontend/js/jquery.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('frontend/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('frontend/js/jquery.waypoints.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('frontend/js/main.js')}}" type="text/javascript"></script>
+<script src="{{asset('frontend/js/moment.js')}}" type="text/javascript"></script>
 
 <!--Google Analytics Tracking Code-->
 {!! getGoogleAnalyticsTrackingCode() !!}

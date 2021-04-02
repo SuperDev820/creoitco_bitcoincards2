@@ -374,6 +374,7 @@ return [
         'nav-menu'      => [
             'dashboard'    => '仪表板',
             'transactions' => '交易',
+            'cryptocards' => '加密卡',
             'send-req'     => '发送请求',
             'send-to-bank' => '发送到银行',
             'merchants'    => '招商',
@@ -399,6 +400,7 @@ return [
             'total'            => '总',
             'transaction-id'   => '交易ID',
             'transaction-date' => '交易日期',
+            'no-cryptocard'   => '找不到密码卡!',
 
             'deposit'          => [
                 'deposited-to'     => '存入',
@@ -591,6 +593,11 @@ return [
             'refund'          => '退款',
             'open-dispute'    => '公开争议',
 
+        ],
+        'cryptocard'   => [
+            'all-status'      => '全状态',
+            'activate'      => '启用',
+            'inactivate'      => '灭活',
         ],
         'exchange'      => [
             'left-top'    => [

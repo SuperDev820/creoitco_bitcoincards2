@@ -90,7 +90,7 @@
 @push('extra_body_scripts')
 
 <!-- jquery.validate -->
-<script src="{{ asset('public/dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 
 @include('common.restrict_number_to_pref_decimal')
 

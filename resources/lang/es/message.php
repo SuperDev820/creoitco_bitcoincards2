@@ -381,6 +381,7 @@ return [
         'nav-menu'      => [
             'dashboard'    => 'Tablero',
             'transactions' => 'Actas',
+            'cryptocards' => 'kriptokartoj',
             'send-req'     => 'Enviar petición',
             'send-to-bank' => 'Enviar al banco',
             'merchants'    => 'Mercantes',
@@ -406,6 +407,7 @@ return [
             'total'            => 'Total',
             'transaction-id'   => 'ID de transacción',
             'transaction-date' => 'Fecha de Transacción',
+            'no-cryptocard'   => 'Neniu kriptokarto trovita!',
 
             'deposit'          => [
                 'deposited-to'     => 'Depositado en',
@@ -599,6 +601,11 @@ return [
             'refund'          => 'Reintegrado',
             'open-dispute'    => 'discusion abierta',
 
+        ],
+        'cryptocard'   => [
+            'all-status'      => 'tute-statusa',
+            'activate'      => 'aktivigi',
+            'inactivate'      => 'senaktivigi',
         ],
         'exchange'      => [
 

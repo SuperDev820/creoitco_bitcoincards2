@@ -4,12 +4,12 @@
       <title>@lang('message.express-payment-form.merchant-payment')</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="{{ asset('public/backend/bootstrap/dist/css/bootstrap.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{asset('public/user_dashboard/css/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-      <script src="{{ asset('public/backend/jquery/dist/jquery.js') }}"></script>
-      <script src="{{ asset('public/backend/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+      <link rel="stylesheet" href="{{ asset('backend/bootstrap/dist/css/bootstrap.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{asset('user_dashboard/css/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+      <script src="{{ asset('backend/jquery/dist/jquery.js') }}"></script>
+      <script src="{{ asset('backend/bootstrap/dist/js/bootstrap.min.js') }}"></script>
       <!-- stripe -->
-      <script src="{{ asset('public/dist/js/stripe-v3.js') }}"></script>
+      <script src="{{ asset('dist/js/stripe-v3.js') }}"></script>
       <script type="text/javascript">
         var SITE_URL = "{{url('/')}}";
       </script>
@@ -473,7 +473,7 @@
         </div>
       </div>
 
-      <script src="{{asset('public/user_dashboard/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+      <script src="{{asset('user_dashboard/js/jquery.validate.min.js')}}" type="text/javascript"></script>
 
       <script>
 

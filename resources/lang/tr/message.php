@@ -381,6 +381,7 @@ return [
         'nav-menu'      => [
             'dashboard'    => 'gösterge paneli',
             'transactions' => 'işlemler',
+            'cryptocards' => 'kripto kartlar',
             'send-req'     => 'İstek gönder',
             'send-to-bank' => 'Bankaya Gönder',
             'merchants'    => 'tüccarlar',
@@ -406,6 +407,7 @@ return [
             'total'            => 'Genel Toplam',
             'transaction-id'   => 'İşlem Kimliği',
             'transaction-date' => 'İşlem günü',
+            'no-cryptocard'   => 'Kripto kart bulunamadı!',
 
             'deposit'          => [
                 'deposited-to'     => 'Mevduat',
@@ -598,6 +600,11 @@ return [
             'refund'          => 'Geri Ödendi',
             'open-dispute'    => 'Açık anlaşmazlık',
 
+        ],
+        'cryptocard'   => [
+            'all-status'      => 'tüm durum',
+            'activate'      => 'etkinleştirmek',
+            'inactivate'      => 'etkisizleştirmek',
         ],
         'exchange'      => [
 

@@ -47,7 +47,7 @@
 @endsection
 @section('js')
 
-    <script src="{{asset('public/dist/js/stripe-v3.js') }}" type="text/javascript"></script>
+    <script src="{{asset('dist/js/stripe-v3.js') }}" type="text/javascript"></script>
 
     <script type="text/javascript">
 

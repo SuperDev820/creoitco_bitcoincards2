@@ -4,14 +4,14 @@
 
 @section('head_style')
     <!-- Bootstrap daterangepicker -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/bootstrap/dist/css/daterangepicker.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/bootstrap/dist/css/daterangepicker.css')}}">
 
     <!-- dataTables -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/DataTables_latest/DataTables-1.10.18/css/jquery.dataTables.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/DataTables_latest/Responsive-2.2.2/css/responsive.dataTables.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/DataTables_latest/DataTables-1.10.18/css/jquery.dataTables.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/DataTables_latest/Responsive-2.2.2/css/responsive.dataTables.min.css') }}">
 
     <!-- jquery-ui-1.12.1 -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/jquery-ui-1.12.1/jquery-ui.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/jquery-ui-1.12.1/jquery-ui.min.css')}}">
 @endsection
 
 @section('page_content')
@@ -110,14 +110,14 @@
 
 @push('extra_body_scripts')
     <!-- Bootstrap daterangepicker -->
-    <script src="{{ asset('public/backend/bootstrap-daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/bootstrap-daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
 
     <!-- jquery.dataTables js -->
-    <script src="{{ asset('public/backend/DataTables_latest/DataTables-1.10.18/js/jquery.dataTables.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('public/backend/DataTables_latest/Responsive-2.2.2/js/dataTables.responsive.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/DataTables_latest/DataTables-1.10.18/js/jquery.dataTables.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/DataTables_latest/Responsive-2.2.2/js/dataTables.responsive.min.js') }}" type="text/javascript"></script>
 
     <!-- jquery-ui-1.12.1 -->
-    <script src="{{ asset('public/backend/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('backend/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
 
     {!! $dataTable->scripts() !!}
 

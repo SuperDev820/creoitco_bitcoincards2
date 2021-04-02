@@ -165,6 +165,10 @@ class PermissionsRolesTableSeeder extends Seeder
             ['permission_id' => 176, 'role_id' => '1'],
             //admin - ends
 
+            ['permission_id' => 177, 'role_id' => '1'],
+            ['permission_id' => 177, 'role_id' => '2'],
+            ['permission_id' => 177, 'role_id' => '3'],
+            
             //user - starts
             ['permission_id' => 109, 'role_id' => '2'],
             ['permission_id' => 110, 'role_id' => '2'],

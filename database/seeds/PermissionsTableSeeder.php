@@ -265,6 +265,8 @@ class PermissionsTableSeeder extends Seeder
             ['id' => '174', 'group' => 'Crypto Transactions', 'name' => 'add_crypto_transactions', 'display_name' => null, 'description' => null, 'user_type' => 'Admin'],
             ['id' => '175', 'group' => 'Crypto Transactions', 'name' => 'edit_crypto_transactions', 'display_name' => null, 'description' => null, 'user_type' => 'Admin'],
             ['id' => '176', 'group' => 'Crypto Transactions', 'name' => 'delete_crypto_transactions', 'display_name' => null, 'description' => null, 'user_type' => 'Admin'],
+
+            ['id' => '177', 'group' => 'Cryptocard', 'name' => 'manage_cryptocard', 'display_name' => 'Manage Cryptocard', 'description' => 'Manage Cryptocard', 'user_type' => 'User'],
         ];
 
       \DB::statement('SET FOREIGN_KEY_CHECKS = 0');

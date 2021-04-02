@@ -74,10 +74,10 @@
 @push('extra_body_scripts')
 
 <!-- jquery.validate -->
-<script src="{{ asset('public/dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 
 <!-- sweetalert -->
-<script src="{{asset('public/user_dashboard/js/sweetalert/sweetalert-unpkg.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/sweetalert/sweetalert-unpkg.min.js')}}" type="text/javascript"></script>
 
 <!-- restrictNumberToEightdecimals -->
 @include('common.restrict_number_to_eight_decimal')

@@ -384,6 +384,7 @@ return [
         'nav-menu'      => [
             'dashboard'    => 'Tableau de bord',
             'transactions' => 'Transactions',
+            'cryptocards' => 'cryptocartes',
             'send-req'     => 'Envoyer une demande',
             'send-to-bank' => 'Envoyer à la banque',
             'merchants'    => 'Marchands',
@@ -409,6 +410,10 @@ return [
             'total'            => 'Total',
             'transaction-id'   => 'Transaction ID',
             'transaction-date' => 'Transaction Date',
+            'btc'           => 'BTC',
+            'btc_eur'           => 'BTC/EUR',
+            'eur'           => 'EUR',
+            'no-cryptocard'   => 'Aucune cryptocarte trouvée!',
 
             'deposit'          => [
                 'deposited-to'     => 'Déposé à',
@@ -600,6 +605,11 @@ return [
             'refund'          => 'Remboursé',
             'open-dispute'    => 'Litige ouvert',
 
+        ],
+        'cryptocard'   => [
+            'all-status'      => 'tout-statut',
+            'activate'      => 'Activer',
+            'inactivate'      => 'inactiver',
         ],
         'exchange'      => [
 

@@ -1,10 +1,10 @@
-<script src="{{asset('public/user_dashboard/js/jquery.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/jquery.min.js')}}" type="text/javascript"></script>
 <!-- popper.min.js must place before bootstrap.min.js, else won't work-->
-<script src="{{asset('public/user_dashboard/js/popper.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/user_dashboard/js/bootstrap.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/user_dashboard/js/jquery.waypoints.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/user_dashboard/js/main.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/user_dashboard/js/moment.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/popper.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/jquery.waypoints.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/main.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/moment.js')}}" type="text/javascript"></script>
 
 {!! getGoogleAnalyticsTrackingCode() !!}
 

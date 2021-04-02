@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ruda:400,700,900">
     <!---favicon-->
     @if (!empty(getfavicon()))
-        <link rel="shortcut icon" href="{{asset('public/images/logos/'.getfavicon())}}" />
+        <link rel="shortcut icon" href="{{asset('images/logos/'.getfavicon())}}" />
     @endif
     <style type="text/css">
     body { margin: 0; padding: 10px; background-color: #ed5565; font-family: "Ruda",sans-serif; color: #FFF; }

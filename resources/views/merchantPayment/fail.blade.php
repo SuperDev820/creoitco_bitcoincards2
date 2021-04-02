@@ -4,9 +4,9 @@
     <title>@lang('message.express-payment-form.merchant-payment')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('public/backend/bootstrap/dist/css/bootstrap.css') }}">
-    <script src="{{ asset('public/backend/jquery/dist/jquery.js') }}"></script>
-    <script src="{{ asset('public/backend/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('backend/bootstrap/dist/css/bootstrap.css') }}">
+    <script src="{{ asset('backend/jquery/dist/jquery.js') }}"></script>
+    <script src="{{ asset('backend/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script type="text/javascript">
       var SITE_URL = "{{URL::to('/')}}";
     </script>

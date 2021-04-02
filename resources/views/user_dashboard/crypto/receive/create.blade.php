@@ -93,11 +93,11 @@
 @section('js')
 
 <!-- jquery-qrcode -->
-<script src="{{asset('public/user_dashboard/js/jquery-qrcode/jquery.qrcode.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/user_dashboard/js/jquery-qrcode/qrcode.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/jquery-qrcode/jquery.qrcode.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/jquery-qrcode/qrcode.js')}}" type="text/javascript"></script>
 
 <!-- sweetalert -->
-<script src="{{asset('public/user_dashboard/js/sweetalert/sweetalert-unpkg.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/sweetalert/sweetalert-unpkg.min.js')}}" type="text/javascript"></script>
 
 <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 

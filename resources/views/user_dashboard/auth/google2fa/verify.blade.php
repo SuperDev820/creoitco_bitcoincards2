@@ -22,24 +22,24 @@
 	        <title>{{!isset($exception) ? meta(Route::current()->uri(),'title'):$exception->title}} <?= isset($additionalTitle)?'| '.$additionalTitle :'' ?></title>
 
 	        <!--css styles-->
-	        <link rel="stylesheet" type="text/css" href="{{asset('public/user_dashboard/css/bootstrap.min.css')}}">
-			<link rel="stylesheet" type="text/css" href="{{asset('public/user_dashboard/css/themify-icons.css')}}">
-			<link rel="stylesheet" type="text/css" href="{{asset('public/user_dashboard/css/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-			<link rel="stylesheet" type="text/css"  href="{{asset('public/user_dashboard/css/reset.css')}}">
-			<link rel="stylesheet" type="text/css"  href="{{asset('public/user_dashboard/css/style.css')}}">
-			<link rel="stylesheet" type="text/css"  href="{{asset('public/user_dashboard/css/responsive.css')}}">
-			<link rel="stylesheet" type="text/css"  href="{{asset('public/user_dashboard/css/animate.min.css')}}">
-			<link rel="stylesheet" type="text/css" href="{{ asset('public/user_dashboard/css/sweetalert/sweetalert.css')}}">
+	        <link rel="stylesheet" type="text/css" href="{{asset('user_dashboard/css/bootstrap.min.css')}}">
+			<link rel="stylesheet" type="text/css" href="{{asset('user_dashboard/css/themify-icons.css')}}">
+			<link rel="stylesheet" type="text/css" href="{{asset('user_dashboard/css/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+			<link rel="stylesheet" type="text/css"  href="{{asset('user_dashboard/css/reset.css')}}">
+			<link rel="stylesheet" type="text/css"  href="{{asset('user_dashboard/css/style.css')}}">
+			<link rel="stylesheet" type="text/css"  href="{{asset('user_dashboard/css/responsive.css')}}">
+			<link rel="stylesheet" type="text/css"  href="{{asset('user_dashboard/css/animate.min.css')}}">
+			<link rel="stylesheet" type="text/css" href="{{ asset('user_dashboard/css/sweetalert/sweetalert.css')}}">
 
 			<!-- iCheck -->
 			<link rel="stylesheet" type="text/css" href="{{ url('public/user_dashboard/css/iCheck/square/blue.css') }}">
 
 	        <!---title logo icon-->
-	        <link rel="javascript" href="{{asset('public/user_dashboard/js/respond.js')}}">
+	        <link rel="javascript" href="{{asset('user_dashboard/js/respond.js')}}">
 
 	        <!---favicon-->
 	        @if (!empty(getfavicon()))
-	            <link rel="shortcut icon" href="{{asset('public/images/logos/'.getfavicon())}}" />
+	            <link rel="shortcut icon" href="{{asset('images/logos/'.getfavicon())}}" />
 	        @endif
 
 			<!-- must include below if using auth middleware, or, creates problem in ajax token -->
@@ -98,7 +98,7 @@
 		        <div class="container">
 		            @if (isset($logo))
 		                <a style="max-height:100%;margin-left:5px;width: 157px;overflow: hidden;" class="navbar-brand logo_area" href="{{url('/')}}">
-		                    <img src="{{asset('public/images/logos/'.$logo)}}" alt="logo" class="img-responsive img-fluid">
+		                    <img src="{{asset('images/logos/'.$logo)}}" alt="logo" class="img-responsive img-fluid">
 		                </a>
 		            @else
 		                <a style="max-height:100%;margin-left:5px;width: 157px;overflow: hidden;" class="navbar-brand logo_area" href="{{url('/')}}">
@@ -294,22 +294,22 @@
     </body>
 
     <!--javascript-->
-	<script src="{{asset('public/user_dashboard/js/jquery.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('user_dashboard/js/jquery.min.js')}}" type="text/javascript"></script>
 
     <!--bootstrap-->
-	<script src="{{asset('public/user_dashboard/js/bootstrap.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('user_dashboard/js/bootstrap.min.js')}}" type="text/javascript"></script>
 
     <!--jquery waypoints-->
-	<script src="{{asset('public/user_dashboard/js/jquery.waypoints.min.js')}}" type="text/javascript"></script>
+	<script src="{{asset('user_dashboard/js/jquery.waypoints.min.js')}}" type="text/javascript"></script>
 
     <!--main-->
-	<script src="{{asset('public/user_dashboard/js/main.js')}}" type="text/javascript"></script>
+	<script src="{{asset('user_dashboard/js/main.js')}}" type="text/javascript"></script>
 
 	<!-- iCheck -->
 	<script src="{{ url('public/user_dashboard/css/iCheck/icheck.min.js') }}" type="text/javascript"></script>
 
 	<!-- sweetalert -->
-	<script src="{{ asset('public/user_dashboard/css/sweetalert/sweetalert.min.js')}}" type="text/javascript"></script>
+	<script src="{{ asset('user_dashboard/css/sweetalert/sweetalert.min.js')}}" type="text/javascript"></script>
 
 	<!-- fingerprint2 -->
 	<script src="{{ url('public/user_dashboard/js/fpjs2/fpjs2.js') }}" type="text/javascript"></script>

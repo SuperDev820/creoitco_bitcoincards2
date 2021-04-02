@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="{{asset('public/frontend/images/section1.png')}}" alt="Phone Image" class="img-responsive img-fluid" />
+                <img src="{{asset('frontend/images/section1.png')}}" alt="Phone Image" class="img-responsive img-fluid" />
             </div>
         </div>
     </div>

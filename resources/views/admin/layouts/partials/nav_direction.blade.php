@@ -5,7 +5,7 @@
         $("#direction").click(function()
         {
             var $head = $("head");
-            var link_element = "<link rel='stylesheet' href='{{ URL::asset('public/dist/css/AdminLTE-rtl.css') }}'>";
+            var link_element = "<link rel='stylesheet' href='{{ URL::asset('dist/css/AdminLTE-rtl.css') }}'>";
             $head.append(link_element).slideToggle();
             console.log(link_element);
         });

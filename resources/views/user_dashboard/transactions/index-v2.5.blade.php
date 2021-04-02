@@ -2,7 +2,7 @@
 
 @section('css')
     <!--daterangepicker-->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/user_dashboard/css/daterangepicker.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user_dashboard/css/daterangepicker.css')}}">
 @endsection
 
 @section('content')
@@ -220,9 +220,9 @@
                                                                         @if(!empty($payment_method))
                                                                             @if ($transaction->payment_method_id == 1)
                                                                                 @if (!empty($img))
-                                                                                    <img src="{{asset('public/images/logos/'.$img)}}" class="rounded-circle rounded-circle-custom-trans">
+                                                                                    <img src="{{asset('images/logos/'.$img)}}" class="rounded-circle rounded-circle-custom-trans">
                                                                                 @else
-                                                                                    <img src="{{asset('public/uploads/userPic/default-logo.jpg')}}" class="rounded-circle rounded-circle-custom-trans">
+                                                                                    <img src="{{asset('uploads/userPic/default-logo.jpg')}}" class="rounded-circle rounded-circle-custom-trans">
                                                                                 @endif
                                                                             @else
                                                                                 <img src='{{url("public/images/payment_gateway/thumb/$img")}}' class="rounded-circle rounded-circle-custom-trans">
@@ -234,9 +234,9 @@
                                                                     @if(!empty($payment_method))
                                                                         @if ($transaction->payment_method_id == 1)
                                                                             @if (!empty($img))
-                                                                                <img src="{{asset('public/images/logos/'.$img)}}" class="rounded-circle rounded-circle-custom-trans">
+                                                                                <img src="{{asset('images/logos/'.$img)}}" class="rounded-circle rounded-circle-custom-trans">
                                                                             @else
-                                                                                <img src="{{asset('public/uploads/userPic/default-logo.jpg')}}" class="rounded-circle rounded-circle-custom-trans">
+                                                                                <img src="{{asset('uploads/userPic/default-logo.jpg')}}" class="rounded-circle rounded-circle-custom-trans">
                                                                             @endif
                                                                         @else
                                                                             <img src='{{url("public/images/payment_gateway/thumb/$img")}}' class="rounded-circle rounded-circle-custom-trans">
@@ -399,7 +399,7 @@
 @section('js')
 
     <!--daterangepicker-->
-    <script src="{{asset('public/user_dashboard/js/daterangepicker.js')}}" type="text/javascript"></script>
+    <script src="{{asset('user_dashboard/js/daterangepicker.js')}}" type="text/javascript"></script>
 
     @include('user_dashboard.layouts.common.check-user-status')
 

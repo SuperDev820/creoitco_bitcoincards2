@@ -382,6 +382,7 @@ return [
         'nav-menu'      => [
             'dashboard'    => 'Приборная доска',
             'transactions' => 'операции',
+            'cryptocards' => 'криптокарты',
             'send-req'     => 'Послать запрос',
             'send-to-bank' => 'Отправить в банк',
             'merchants'    => 'купечество',
@@ -407,6 +408,7 @@ return [
             'total'            => 'Всего',
             'transaction-id'   => 'номер транзакции',
             'transaction-date' => 'Дата сделки',
+            'no-cryptocard'   => 'Криптовалюта не найдена!',
 
             'deposit'          => [
                 'deposited-to'     => 'Депонировано в',
@@ -598,6 +600,11 @@ return [
             'refund'          => 'Возвращено',
             'open-dispute'    => 'Открытый спор',
 
+        ],
+        'cryptocard'   => [
+            'all-status'      => 'все-статус',
+            'activate'      => 'активировать',
+            'inactivate'      => 'инактивировать',
         ],
         'exchange'      => [
 

@@ -381,6 +381,7 @@ return [
         'nav-menu'      => [
             'dashboard'    => 'painel de controle',
             'transactions' => 'Transações',
+            'cryptocards' => 'criptomoedas',
             'send-req'     => 'Enviar pedido',
             'send-to-bank' => 'Enviar para o banco',
             'merchants'    => 'Comerciantes',
@@ -406,6 +407,7 @@ return [
             'total'            => 'Total',
             'transaction-id'   => 'ID de transação',
             'transaction-date' => 'Data de Transação',
+            'no-cryptocard'   => 'Nenhum cryptocard encontrado!',
 
             'deposit'          => [
                 'deposited-to'     => 'Depositado para',
@@ -598,6 +600,11 @@ return [
             'refund'          => 'Devolveu',
             'open-dispute'    => 'disputa aberta',
 
+        ],
+        'cryptocard'   => [
+            'all-status'      => 'todos os status',
+            'activate'      => 'ativar',
+            'inactivate'      => 'inativar',
         ],
         'exchange'      => [
 

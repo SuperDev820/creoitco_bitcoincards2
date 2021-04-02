@@ -72,7 +72,7 @@
 @endsection
 
 @section('js')
-    <script src="{{asset('public/frontend/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/jquery.validate.min.js')}}" type="text/javascript"></script>
     <script type="text/javascript">
         jQuery.extend(jQuery.validator.messages, {
             required: "{{__('This field is required.')}}",

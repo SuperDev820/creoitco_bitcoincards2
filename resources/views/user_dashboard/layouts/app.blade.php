@@ -13,11 +13,11 @@
         @include('user_dashboard.layouts.common.style')
 
         <!---title logo icon-->
-        <link rel="javascript" href="{{asset('public/user_dashboard/js/respond.js')}}">
+        <link rel="javascript" href="{{asset('user_dashboard/js/respond.js')}}">
 
         <!---favicon-->
         @if (!empty(getfavicon()))
-            <link rel="shortcut icon" href="{{asset('public/images/logos/'.getfavicon())}}" />
+            <link rel="shortcut icon" href="{{asset('images/logos/'.getfavicon())}}" />
         @endif
 
         <script type="text/javascript">
@@ -55,7 +55,7 @@
             <a href="{{url()->current()}}#top-header"><i class="ti-angle-double-up" aria-hidden="true"></i></a>
         </div>
 
-         @include('user_dashboard.layouts.common.header')
+        @include('user_dashboard.layouts.common.header')
 
         @yield('content')
 

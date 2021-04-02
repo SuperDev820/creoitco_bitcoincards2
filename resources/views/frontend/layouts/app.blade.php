@@ -12,11 +12,11 @@
     @include('frontend.layouts.common.style')
 
     <!---title logo icon-->
-    <link rel="javascript" href="{{asset('public/frontend/js/respond.js')}}">
+    <link rel="javascript" href="{{asset('frontend/js/respond.js')}}">
 
     <!---favicon-->
     @if (!empty(getfavicon()))
-        <link rel="shortcut icon" href="{{asset('public/images/logos/'.getfavicon())}}" />
+        <link rel="shortcut icon" href="{{asset('images/logos/'.getfavicon())}}" />
     @endif
 
     <script type="text/javascript">

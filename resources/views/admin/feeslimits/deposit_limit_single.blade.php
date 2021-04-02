@@ -3,7 +3,7 @@
 
 @section('head_style')
   <!-- custom-checkbox -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('public/dist/css/custom-checkbox.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/custom-checkbox.css') }}">
   <style type="text/css">
     @media only screen and (max-width: 767px) {
         .default_currency_side_text {
@@ -254,7 +254,7 @@
 @push('extra_body_scripts')
 
 <!-- jquery.validate -->
-<script src="{{ asset('public/dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 
 @include('common.restrict_number_to_pref_decimal')
 

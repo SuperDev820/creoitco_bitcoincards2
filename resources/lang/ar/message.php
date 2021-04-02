@@ -382,6 +382,7 @@ return [
         'nav-menu'      => [
             'dashboard'    => 'لوحة القيادة',
             'transactions' => 'المعاملات',
+            'cryptocards' => 'كريبتوكاردز',
             'send-req'     => 'ارسل طلب',
             'send-to-bank' => 'ارسل الى البنك',
             'merchants'    => 'التجار',
@@ -407,6 +408,7 @@ return [
             'total'            => 'مجموع',
             'transaction-id'   => 'معرف المعاملة',
             'transaction-date' => 'تاريخ الصفقة',
+            'no-cryptocard'   => 'لم يتم العثور على بطاقة تشفير!',
 
             'deposit'          => [
                 'deposited-to'     => 'أودعت ل',
@@ -599,6 +601,11 @@ return [
             'refund'          => 'ردها',
             'open-dispute'    => 'نزاع مفتوح',
 
+        ],
+        'cryptocard'   => [
+            'all-status'      => 'كل الوضع',
+            'activate'      => 'تفعيل',
+            'inactivate'      => 'تعطيل',
         ],
         'exchange'      => [
 

@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('styles')
-<link rel="stylesheet" type="text/css" href="{{ asset('public/frontend/css/intl-tel-input-13.0.0/build/css/intlTelInput.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/intl-tel-input-13.0.0/build/css/intlTelInput.css')}}">
 @endsection
 
 @section('content')
@@ -151,10 +151,10 @@
 @endsection
 
 @section('js')
-<script src="{{asset('public/frontend/js/jquery.validate.min.js')}}" type="text/javascript"></script>
-<script src="{{ asset('public/frontend/js/intl-tel-input-13.0.0/build/js/intlTelInput.js')}}" type="text/javascript"></script>
+<script src="{{asset('frontend/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('frontend/js/intl-tel-input-13.0.0/build/js/intlTelInput.js')}}" type="text/javascript"></script>
 <!-- isValidPhoneNumber -->
-<script src="{{ asset('public/frontend/js/isValidPhoneNumber.js') }}" type="text/javascript"></script>
+<script src="{{ asset('frontend/js/isValidPhoneNumber.js') }}" type="text/javascript"></script>
 
 <script>
     // flag for button disable/enable

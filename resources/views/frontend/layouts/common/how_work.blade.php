@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{asset('public/frontend/images/section4.jpg')}}" alt="Phone Image" class="img-responsive img-fluid" />
+            <img src="{{asset('frontend/images/section4.jpg')}}" alt="Phone Image" class="img-responsive img-fluid" />
         </div>
         <div class="col-md-6">
             <div class="sec-title">

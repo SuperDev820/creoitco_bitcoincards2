@@ -14,11 +14,11 @@
     if(!empty(Auth::guard('admin')->user()->picture))
     {
       $picture = Auth::guard('admin')->user()->picture;
-      $admin_image = asset('public/uploads/userPic/'.$picture);
+      $admin_image = asset('uploads/userPic/'.$picture);
     }
     else
     {
-      $admin_image = asset('public/uploads/userPic/default-image.png');
+      $admin_image = asset('uploads/userPic/default-image.png');
     }
     $admin_name = Auth::guard('admin')->user()->first_name.' '.Auth::guard('admin')->user()->last_name;
     $admin_email = Auth::guard('admin')->user()->email;
@@ -42,7 +42,7 @@
 
         <!---favicon-->
         @if (!empty(getfavicon()))
-            <link rel="shortcut icon" href="{{asset('public/images/logos/'.getfavicon())}}" />
+            <link rel="shortcut icon" href="{{asset('images/logos/'.getfavicon())}}" />
         @endif
 
         @include('admin.layouts.partials.head_style')

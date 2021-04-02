@@ -12,7 +12,7 @@
                 <li><!-- start message -->
                     <a href="#">
                         <div class="pull-left">
-                            <img src="{{ URL::asset('public/admin_dashboard/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                            <img src="{{ URL::asset('admin_dashboard/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
                         </div>
                         <h4>
                             Support Team
@@ -25,7 +25,7 @@
                 <li>
                     <a href="#">
                         <div class="pull-left">
-                            <img src="{{ URL::asset('public/admin_dashboard/img/user3-128x128.jpg') }}" class="img-circle" alt="User Image">
+                            <img src="{{ URL::asset('admin_dashboard/img/user3-128x128.jpg') }}" class="img-circle" alt="User Image">
                         </div>
                         <h4>
                             AdminLTE Design Team
@@ -37,7 +37,7 @@
                 <li>
                     <a href="#">
                         <div class="pull-left">
-                            <img src="{{ URL::asset('public/admin_dashboard/img/user4-128x128.jpg') }} " class="img-circle" alt="User Image">
+                            <img src="{{ URL::asset('admin_dashboard/img/user4-128x128.jpg') }} " class="img-circle" alt="User Image">
                         </div>
                         <h4>
                             Developers
@@ -49,7 +49,7 @@
                 <li>
                     <a href="#">
                         <div class="pull-left">
-                            <img src="{{ URL::asset('public/admin_dashboard/img/user3-128x128.jpg') }} " class="img-circle" alt="User Image">
+                            <img src="{{ URL::asset('admin_dashboard/img/user3-128x128.jpg') }} " class="img-circle" alt="User Image">
                         </div>
                         <h4>
                             Sales Department
@@ -61,7 +61,7 @@
                 <li>
                     <a href="#">
                         <div class="pull-left">
-                            <img src="{{ URL::asset('public/admin_dashboard/img/user4-128x128.jpg') }} " class="img-circle" alt="User Image">
+                            <img src="{{ URL::asset('admin_dashboard/img/user4-128x128.jpg') }} " class="img-circle" alt="User Image">
                         </div>
                         <h4>
                             Reviewers

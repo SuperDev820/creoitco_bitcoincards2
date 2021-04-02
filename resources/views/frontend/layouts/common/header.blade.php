@@ -11,7 +11,7 @@ $logo = getCompanyLogoWithoutSession(); //direct query
         <div class="container">
             @if($logo)
                 <a style="height: 45px;width: 157px;overflow: hidden;"  class="navbar-brand" href="@if (request()->path() != 'merchant/payment') {{ url('/') }} @else {{ '#' }} @endif">
-                    <img src="{{asset('public/images/logos/'.$logo)}}" alt="logo" class="img-responsive img-fluid">
+                    <img src="{{asset('images/logos/'.$logo)}}" alt="logo" class="img-responsive img-fluid">
                 </a>
             @else
                 <a style="height: 45px;width: 157px;overflow: hidden;"  class="navbar-brand" href="@if (request()->path() != 'merchant/payment') {{ url('/') }} @else {{ '#' }} @endif">

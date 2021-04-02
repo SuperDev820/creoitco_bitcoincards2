@@ -510,8 +510,8 @@
 @endsection
 @section('js')
 
-    <script src="{{asset('public/user_dashboard/js/jquery.validate.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('public/user_dashboard/js/additional-methods.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('user_dashboard/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('user_dashboard/js/additional-methods.min.js')}}" type="text/javascript"></script>
 
     <script>
 
@@ -1125,20 +1125,20 @@
                     cache: false,
                     success: function (data) {
                         if (data.fail) {
-                            $('#profileImage').attr('src', '{{asset('public/user_dashboard/images/avatar.jpg')}}');
+                            $('#profileImage').attr('src', '{{asset('user_dashboard/images/avatar.jpg')}}');
                             // alert(data.errors['file']);
                             alert(data.errors);
                         }
                         else {
                             $('#file_name').val(data);
-                            $('#profileImage').attr('src', '{{asset('public/user_dashboard/profile')}}/' + data);
-                            $('#profileImageHeader').attr('src', '{{asset('public/user_dashboard/profile')}}/' + data);
+                            $('#profileImage').attr('src', '{{asset('user_dashboard/profile')}}/' + data);
+                            $('#profileImageHeader').attr('src', '{{asset('user_dashboard/profile')}}/' + data);
                         }
                         $('#loading').css('display', 'none');
                     },
                     error: function (xhr, status, error) {
                         alert(xhr.responseText);
-                        $('#profileImage').attr('src', '{{asset('public/user_dashboard/images/avatar.jpg')}}');
+                        $('#profileImage').attr('src', '{{asset('user_dashboard/images/avatar.jpg')}}');
                     }
                 });
             }

@@ -75,7 +75,7 @@
 
 @section('js')
 
-    <script src="{{asset('public/frontend/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/jquery.validate.min.js')}}" type="text/javascript"></script>
 
     <script>
 

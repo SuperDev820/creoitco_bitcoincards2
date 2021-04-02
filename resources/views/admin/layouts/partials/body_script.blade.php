@@ -1,14 +1,14 @@
 <!-- Bootstrap 3.3.7 -->
-<script src="{{ asset('public/backend/bootstrap/dist/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('backend/bootstrap/dist/js/bootstrap.min.js') }}" type="text/javascript"></script>
 
 <!-- Select2 -->
-<script src="{{ asset('public/backend/select2/select2.full.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('backend/select2/select2.full.min.js') }}" type="text/javascript"></script>
 
 <!-- moment -->
-<script src="{{ asset('public/backend/moment/moment.js') }}" type="text/javascript"></script>
+<script src="{{ asset('backend/moment/moment.js') }}" type="text/javascript"></script>
 
 <!-- AdminLTE App -->
-<script src="{{ asset('public/dist/js/app.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/app.min.js') }}" type="text/javascript"></script>
 
 <!-- Page script -->
 

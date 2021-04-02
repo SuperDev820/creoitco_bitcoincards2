@@ -2,7 +2,7 @@
 
 @section('css')
     <!--daterangepicker-->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/user_dashboard/css/daterangepicker.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user_dashboard/css/daterangepicker.css')}}">
 @endsection
 
 @section('content')
@@ -345,7 +345,7 @@
 @section('js')
 
     <!--daterangepicker-->
-    <script src="{{asset('public/user_dashboard/js/daterangepicker.js')}}" type="text/javascript"></script>
+    <script src="{{asset('user_dashboard/js/daterangepicker.js')}}" type="text/javascript"></script>
 
     @include('user_dashboard.layouts.common.check-user-status')
 

@@ -3,10 +3,10 @@
 
 @section('head_style')
   <!-- custom-checkbox -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('public/dist/css/custom-checkbox.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/custom-checkbox.css') }}">
 
    <!-- sweetalert -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/sweetalert/sweetalert.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('backend/sweetalert/sweetalert.css')}}">
 
   <style type="text/css">
     @media only screen and (max-width: 767px) {
@@ -207,13 +207,13 @@
 @push('extra_body_scripts')
 
 <!-- jquery.validate -->
-<script src="{{ asset('public/dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 
 <!-- jquery.validate additional-methods -->
-<script src="{{ asset('public/dist/js/jquery-validation-1.17.0/dist/additional-methods.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery-validation-1.17.0/dist/additional-methods.min.js') }}" type="text/javascript"></script>
 
 <!-- sweetalert -->
-<script src="{{ asset('public/backend/sweetalert/sweetalert.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('backend/sweetalert/sweetalert.min.js')}}" type="text/javascript"></script>
 
 <!-- read-file-on-change -->
 @include('common.read-file-on-change')

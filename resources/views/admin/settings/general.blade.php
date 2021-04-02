@@ -3,10 +3,10 @@
 
 @section('head_style')
    <!-- sweetalert -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/sweetalert/sweetalert.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('backend/sweetalert/sweetalert.css')}}">
 
   <!-- bootstrap-select -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/bootstrap-select-1.13.12/css/bootstrap-select.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('backend/bootstrap-select-1.13.12/css/bootstrap-select.min.css')}}">
 
 @endsection
 
@@ -175,16 +175,16 @@
 @push('extra_body_scripts')
 
   <!-- jquery.validate -->
-  <script src="{{ asset('public/dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 
   <!-- jquery.validate additional-methods -->
-  <script src="{{ asset('public/dist/js/jquery-validation-1.17.0/dist/additional-methods.min.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('dist/js/jquery-validation-1.17.0/dist/additional-methods.min.js') }}" type="text/javascript"></script>
 
   <!-- sweetalert -->
-  <script src="{{ asset('public/backend/sweetalert/sweetalert.min.js')}}" type="text/javascript"></script>
+  <script src="{{ asset('backend/sweetalert/sweetalert.min.js')}}" type="text/javascript"></script>
 
   <!-- bootstrap-select -->
-  <script src="{{ asset('public/backend/bootstrap-select-1.13.12/js/bootstrap-select.min.js') }}" type="text/javascript"></script>
+  <script src="{{ asset('backend/bootstrap-select-1.13.12/js/bootstrap-select.min.js') }}" type="text/javascript"></script>
 
   <!-- read-file-on-change -->
   @include('common.read-file-on-change')

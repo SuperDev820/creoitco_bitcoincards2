@@ -560,6 +560,12 @@ Route::group(['middleware' => ['guest:users', 'locale', 'twoFa', 'check-user-ina
         Route::get('transactions/crypto-sent-received-print/{id}', 'UserTransactionController@cryptoSentReceivedTransactionPrintPdf');
     });
 
+    // cryptocards
+    Route::group(['middleware' => ['permission:manage_cryptocard']], function ()
+    {
+        Route::match(array('GET', 'POST'), 'cryptocards', 'CryptocardController@index');
+    });
+
     // Currency Exchange - Without Suspend Middleware
     Route::group(['middleware' => ['permission:manage_exchange']], function ()
     {

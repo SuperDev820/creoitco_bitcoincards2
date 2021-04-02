@@ -1,7 +1,7 @@
 @extends('user_dashboard.layouts.app')
 
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/user_dashboard/css/intl-tel-input-13.0.0/build/css/intlTelInput.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('user_dashboard/css/intl-tel-input-13.0.0/build/css/intlTelInput.css')}}">
     <style>
         @media only screen and (max-width: 508px) {
             .chart-list ul li.active a {
@@ -567,10 +567,10 @@
 
 @section('js')
 
-<script src="{{asset('public/user_dashboard/js/jquery.validate.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/user_dashboard/js/additional-methods.min.js')}}" type="text/javascript"></script>
-<script src="{{ asset('public/user_dashboard/js/intl-tel-input-13.0.0/build/js/intlTelInput.js')}}" type="text/javascript"></script>
-<script src="{{asset('public/user_dashboard/js/isValidPhoneNumber.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/additional-methods.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('user_dashboard/js/intl-tel-input-13.0.0/build/js/intlTelInput.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/isValidPhoneNumber.js')}}" type="text/javascript"></script>
 
 <script>
 ////////////////////////////////////////////////////////////////
@@ -1387,7 +1387,7 @@
                     cache: false,
                     success: function (data) {
                         if (data.fail) {
-                            $('#profileImage').attr('src', '{{asset('public/user_dashboard/images/avatar.jpg')}}');
+                            $('#profileImage').attr('src', '{{asset('user_dashboard/images/avatar.jpg')}}');
                             // alert(data.errors['file']);
                             // alert(data.errors);
                             // log(data.errors.file);
@@ -1401,14 +1401,14 @@
                         else {
                             $('#file-error').hide();
                             $('#file_name').val(data);
-                            $('#profileImage').attr('src', '{{asset('public/user_dashboard/profile')}}/' + data);
-                            $('#profileImageHeader').attr('src', '{{asset('public/user_dashboard/profile')}}/' + data);
+                            $('#profileImage').attr('src', '{{asset('user_dashboard/profile')}}/' + data);
+                            $('#profileImageHeader').attr('src', '{{asset('user_dashboard/profile')}}/' + data);
                         }
                         $('#loading').css('display', 'none');
                     },
                     error: function (xhr, status, error) {
                         alert(xhr.responseText);
-                        $('#profileImage').attr('src', '{{asset('public/user_dashboard/images/avatar.jpg')}}');
+                        $('#profileImage').attr('src', '{{asset('user_dashboard/images/avatar.jpg')}}');
                     }
                 });
             }

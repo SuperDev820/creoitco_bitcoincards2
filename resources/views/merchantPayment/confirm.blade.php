@@ -6,13 +6,13 @@
         <meta name="description" content="{{!isset($exception) ? meta(Route::current()->uri(),'description'):$exception->description}}">
         <meta name="keywords" content="{{!isset($exception) ? meta(Route::current()->uri(),'keyword'):$exception->keyword}}">
         <title>{{!isset($exception) ? meta(Route::current()->uri(),'title'):$exception->title}} <?= isset($additionalTitle)?'| '.$additionalTitle :'' ?></title>
-        <script src="{{asset('public/user_dashboard/js/jquery.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('user_dashboard/js/jquery.min.js')}}" type="text/javascript"></script>
         @include('user_dashboard.layouts.common.style')
-        <link rel="javascript" href="{{asset('public/frontend/js/respond.js')}}">
+        <link rel="javascript" href="{{asset('frontend/js/respond.js')}}">
 
         <!---favicon-->
         @if (!empty(getfavicon()))
-            <link rel="shortcut icon" href="{{asset('public/images/logos/'.getfavicon())}}" />
+            <link rel="shortcut icon" href="{{asset('images/logos/'.getfavicon())}}" />
         @endif
 
         @include('user_dashboard.layouts.common.style')

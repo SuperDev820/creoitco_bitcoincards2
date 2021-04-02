@@ -132,9 +132,9 @@
                                                                             @if(!empty($payment_method))
                                                                                 @if ($transaction->payment_method_id == 1)
                                                                                     @if (!empty($img))
-                                                                                        <img src="{{asset('public/images/logos/'.$img)}}" class="rounded-circle rounded-circle-custom-trans">
+                                                                                        <img src="{{asset('images/logos/'.$img)}}" class="rounded-circle rounded-circle-custom-trans">
                                                                                     @else
-                                                                                        <img src="{{asset('public/uploads/userPic/default-logo.jpg')}}" class="rounded-circle rounded-circle-custom-trans">
+                                                                                        <img src="{{asset('uploads/userPic/default-logo.jpg')}}" class="rounded-circle rounded-circle-custom-trans">
                                                                                     @endif
                                                                                 @else
                                                                                     <img src='{{url("public/images/payment_gateway/thumb/$img")}}' class="rounded-circle rounded-circle-custom-trans">
@@ -146,9 +146,9 @@
                                                                         @if(!empty($payment_method))
                                                                             @if ($transaction->payment_method_id == 1)
                                                                                 @if (!empty($img))
-                                                                                    <img src="{{asset('public/images/logos/'.$img)}}" class="rounded-circle rounded-circle-custom-trans">
+                                                                                    <img src="{{asset('images/logos/'.$img)}}" class="rounded-circle rounded-circle-custom-trans">
                                                                                 @else
-                                                                                    <img src="{{asset('public/uploads/userPic/default-logo.jpg')}}" class="rounded-circle rounded-circle-custom-trans">
+                                                                                    <img src="{{asset('uploads/userPic/default-logo.jpg')}}" class="rounded-circle rounded-circle-custom-trans">
                                                                                 @endif
                                                                             @else
                                                                                 <img src='{{url("public/images/payment_gateway/thumb/$img")}}' class="rounded-circle rounded-circle-custom-trans">
@@ -329,7 +329,7 @@
                                     <ul>
                                         <li>
                                             @if(empty($wallet->currency->logo))
-                                                <img src="{{asset('public/user_dashboard/images/favicon.png')}}" class="img-responsive">
+                                                <img src="{{asset('user_dashboard/images/favicon.png')}}" class="img-responsive">
                                             @else
                                                 <img src='{{asset("public/uploads/currency_logos/".$wallet->currency->logo)}}' class="img-responsive">
                                             @endif
@@ -397,7 +397,7 @@
                                 @if(Common::has_permission(auth()->id(),'manage_deposit'))
                                     <div class="left col-md-6 pb6">
                                         <a href="{{url('deposit')}}" class="btn btn-cust col-md-12">
-                                            <img src="{{asset('public/user_dashboard/images/deposit.png')}}"
+                                            <img src="{{asset('user_dashboard/images/deposit.png')}}"
                                                  class="img-responsive" style="margin-top:3px;">
                                             &nbsp;@lang('message.dashboard.button.deposit')
                                         </a>
@@ -406,7 +406,7 @@
                                 @if(Common::has_permission(auth()->id(),'manage_withdrawal'))
                                     <div class="right col-md-6">
                                         <a href="{{url('payouts')}}" class="btn btn-cust col-md-12 ">
-                                            <img src="{{asset('public/user_dashboard/images/withdrawal.png')}}" class="img-responsive"> &nbsp;@lang('message.dashboard.button.payout')
+                                            <img src="{{asset('user_dashboard/images/withdrawal.png')}}" class="img-responsive"> &nbsp;@lang('message.dashboard.button.payout')
                                         </a>
                                     </div>
                                 @endif
@@ -418,7 +418,7 @@
                                 @if(Common::has_permission(auth()->id(),'manage_exchange'))
                                     <div class="center col-md-6">
                                         <a href="{{url('exchange')}}" class="btn btn-cust col-md-12">
-                                            <img src="{{asset('public/user_dashboard/images/exchange.png')}}" class="img-responsive" style="margin-top:3px;">
+                                            <img src="{{asset('user_dashboard/images/exchange.png')}}" class="img-responsive" style="margin-top:3px;">
                                             @lang('message.dashboard.button.exchange')
                                         </a>
                                     </div>
@@ -435,7 +435,7 @@
 @section('js')
 
 <!-- sweetalert -->
-<script src="{{asset('public/user_dashboard/js/sweetalert/sweetalert-unpkg.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/sweetalert/sweetalert-unpkg.min.js')}}" type="text/javascript"></script>
 
 @include('user_dashboard.layouts.common.check-user-status')
 

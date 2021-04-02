@@ -83,7 +83,7 @@
 
 @section('js')
 
-<script src="{{asset('public/user_dashboard/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/jquery.validate.min.js')}}" type="text/javascript"></script>
 <script>
     function payoutBack()
     {

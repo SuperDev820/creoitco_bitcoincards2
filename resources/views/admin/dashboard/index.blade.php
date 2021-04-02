@@ -498,7 +498,7 @@
 
 @push('extra_body_scripts')
 
-<script src="{{ asset('public/backend/chart.js/Chart.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('backend/chart.js/Chart.min.js') }}" type="text/javascript"></script>
 
 <script>
 

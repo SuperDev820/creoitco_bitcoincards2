@@ -4,7 +4,7 @@
 
 @section('head_style')
   <!-- intlTelInput -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/intl-tel-input-13.0.0/intl-tel-input-13.0.0/build/css/intlTelInput.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('backend/intl-tel-input-13.0.0/intl-tel-input-13.0.0/build/css/intlTelInput.css')}}">
 @endsection
 
 @section('page_content')
@@ -201,10 +201,10 @@
 @push('extra_body_scripts')
 
 <!-- jquery.validate -->
-<script src="{{ asset('public/dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('public/backend/intl-tel-input-13.0.0/intl-tel-input-13.0.0/build/js/intlTelInput.js')}}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('backend/intl-tel-input-13.0.0/intl-tel-input-13.0.0/build/js/intlTelInput.js')}}" type="text/javascript"></script>
 <!-- isValidPhoneNumber -->
-<script src="{{ asset('public/dist/js/isValidPhoneNumber.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/isValidPhoneNumber.js') }}" type="text/javascript"></script>
 
 <script type="text/javascript">
 

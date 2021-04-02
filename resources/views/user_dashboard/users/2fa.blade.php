@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url('public/user_dashboard/css/iCheck/square/blue.css') }}">
 
     <!-- sweetalert -->
-    <link rel="stylesheet" type="text/css" href="{{asset('public/user_dashboard/css/sweetalert.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user_dashboard/css/sweetalert.css')}}">
 @endsection
 
 @section('content')
@@ -294,7 +294,7 @@
 @section('js')
 <script src="{{ url('public/user_dashboard/css/iCheck/icheck.min.js') }}" type="text/javascript"></script>
 <script src="{{ url('public/user_dashboard/js/fpjs2/fpjs2.js') }}" type="text/javascript"></script>
-<script src="{{asset('public/user_dashboard/js/sweetalert.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('user_dashboard/js/sweetalert.min.js')}}" type="text/javascript"></script>
 
 <script>
 

@@ -4,7 +4,7 @@
 
 @section('head_style')
   <!-- summernote -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('public/dist/editor/summernote.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('dist/editor/summernote.css')}}">
 @endsection
 
 @section('page_content')
@@ -113,9 +113,9 @@
 @push('extra_body_scripts')
 
 <!-- jquery.validate -->
-<script src="{{ asset('public/dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('dist/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 
-<script src="{{ asset('public/dist/editor/summernote.js')}}" type="text/javascript"></script>
+<script src="{{ asset('dist/editor/summernote.js')}}" type="text/javascript"></script>
 
 <script type="text/javascript">
     //summernote.js note script
