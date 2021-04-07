@@ -25,13 +25,16 @@ class CryptocardController extends Controller
         $data['sub_menu'] = 'cryptocards';
 
         $status = 'all';
+        $data['status']       = $status;
 
         if (isset($_GET['status']))
         {
             if ($_GET['status'] == "Activate") {
                 $status = 1;
-            } else {
+                $data['status']       = "Activate";
+            } else if ($_GET['status'] == "Inactivate") {
                 $status = 2;
+                $data['status']       = "Inactivate";
             }
         }
 
@@ -57,7 +60,6 @@ class CryptocardController extends Controller
         $data['to']   = $to;
 
         $data['cryptocards'] = $cryptocard->getCryptocards($from, $to, $status);
-        $data['status']       = $status;
 
         return view('user_dashboard.cryptocards.index', $data);
     }

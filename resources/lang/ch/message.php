@@ -401,6 +401,7 @@ return [
             'transaction-id'   => '交易ID',
             'transaction-date' => '交易日期',
             'no-cryptocard'   => '找不到密码卡!',
+            'purchase_value'  => '购买价值',
 
             'deposit'          => [
                 'deposited-to'     => '存入',

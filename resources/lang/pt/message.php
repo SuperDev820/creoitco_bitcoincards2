@@ -408,6 +408,7 @@ return [
             'transaction-id'   => 'ID de transação',
             'transaction-date' => 'Data de Transação',
             'no-cryptocard'   => 'Nenhum cryptocard encontrado!',
+            'purchase_value'  => 'Valor de compra',
 
             'deposit'          => [
                 'deposited-to'     => 'Depositado para',

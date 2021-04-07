@@ -408,6 +408,7 @@ return [
             'transaction-id'   => 'İşlem Kimliği',
             'transaction-date' => 'İşlem günü',
             'no-cryptocard'   => 'Kripto kart bulunamadı!',
+            'purchase_value'  => 'Alım değeri',
 
             'deposit'          => [
                 'deposited-to'     => 'Mevduat',

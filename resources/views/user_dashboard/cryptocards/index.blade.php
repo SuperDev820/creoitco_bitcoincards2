@@ -53,13 +53,11 @@
                                     <tr>
                                         <td></td>
                                         <td class="text-left">
+                                            <strong>ID</strong></td>
+                                        <td class="text-left">
                                             <strong>BTC</strong></td>
                                         <td class="text-left">
-                                            <strong>BTC/EUR</strong></td>
-                                        <td class="text-left">
-                                            <strong>EUR</strong></td>
-                                        <td class="text-left">
-                                            <strong>@lang('message.dashboard.left-table.status')</strong></td>
+                                            <strong>@lang('message.dashboard.left-table.purchase_value')</strong></td>
                                         <td class="text-left" width="15%">
                                             <strong>@lang('message.dashboard.left-table.date')</strong></td>
                                     </tr>
@@ -80,28 +78,18 @@
                                                     </strong>
                                                 </td>
 
+                                                <td class="text-left">
+                                                    <p>{{ $cryptocard->id }}</p>
+                                                </td>
+
                                                 <!-- BTC -->
                                                 <td class="text-left">
                                                     <p>{{ $cryptocard->BTC }}</p>
                                                 </td>
 
-                                                <!-- BTC/EUR -->
-                                                <td class="text-left">
-                                                    <p>{{ $cryptocard->BTC_EUR }}</p>
-                                                </td>
-
                                                 <!-- EUR -->
                                                 <td class="text-left">
                                                     <p>{{ $cryptocard->EUR }}</P>
-                                                </td>
-
-                                                <!-- Status -->
-                                                <td class="text-left">
-                                                    @if($cryptocard->status == 1)
-                                                        <p>@lang('message.dashboard.cryptocard.activate')</p>
-                                                    @else
-                                                        <p>@lang('message.dashboard.cryptocard.inactivate')</p>
-                                                    @endif
                                                 </td>
 
                                                 <!-- Activated At -->
@@ -110,17 +98,20 @@
                                             <tr id="collapseRow{{$key}}" class="collapse">
                                                 <td colspan="8" class="">
                                                     <div class="row activity-details" id="loader_{{$cryptocard->id}}"
-                                                         style="min-height: 200px">
+                                                         style="min-height: 50px">
 
                                                         <div class="col-md-4 text-left" id="html_{{$key}}">
                                                         </div>
 
                                                         <div class="col-md-3">
-                                                            <div class="right">
-                                                                {{ dateFormat($cryptocard->rateTimestamp) }}
+                                                            <div class="left">
+                                                                {{ $cryptocard->BTC_EUR }}
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5">
+                                                            <div class="right">
+                                                                {{ dateFormat($cryptocard->rateTimestamp) }}
+                                                            </div>
                                                         </div>
 
                                                     </div>

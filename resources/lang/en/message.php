@@ -380,6 +380,7 @@ return [
             'view-all'         => 'View All',
             'no-transaction'   => 'No transaction found!',
             'no-cryptocard'   => 'No cryptocard found!',
+            'purchase_value'  => 'Purchase Value',
 
             /**
              * Common static's in transaction dropdown

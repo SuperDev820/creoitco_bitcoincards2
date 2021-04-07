@@ -57,7 +57,7 @@ class Cryptocard extends Model
                 'wallet:id,user_id,currency_id,balance',
             ])
                 ->where($conditions)
-                ->orderBy('cryptocards.id', 'desc')->select('cryptocards.*')
+                ->orderBy('cryptocards.id')->select('cryptocards.*')
                 ->paginate(15);
         }
         else
@@ -70,7 +70,7 @@ class Cryptocard extends Model
                 ->where($conditions)
                 ->whereDate('cryptocards.activatedFrom', '>=', $from)
                 ->whereDate('cryptocards.activatedFrom', '<=', $to)
-                ->orderBy('cryptocards.id', 'desc')
+                ->orderBy('cryptocards.id')
                 ->select('cryptocards.*')
                 ->paginate(15);
         }

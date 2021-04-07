@@ -414,6 +414,7 @@ return [
             'btc_eur'           => 'BTC/EUR',
             'eur'           => 'EUR',
             'no-cryptocard'   => 'Aucune cryptocarte trouvée!',
+            'purchase_value'  => "Valeur d'achat",
 
             'deposit'          => [
                 'deposited-to'     => 'Déposé à',

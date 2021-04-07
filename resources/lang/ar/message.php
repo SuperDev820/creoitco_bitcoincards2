@@ -409,6 +409,7 @@ return [
             'transaction-id'   => 'معرف المعاملة',
             'transaction-date' => 'تاريخ الصفقة',
             'no-cryptocard'   => 'لم يتم العثور على بطاقة تشفير!',
+            'purchase_value'  => 'قيمة الشراء',
 
             'deposit'          => [
                 'deposited-to'     => 'أودعت ل',

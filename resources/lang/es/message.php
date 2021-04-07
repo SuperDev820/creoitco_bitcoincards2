@@ -408,6 +408,7 @@ return [
             'transaction-id'   => 'ID de transacción',
             'transaction-date' => 'Fecha de Transacción',
             'no-cryptocard'   => 'Neniu kriptokarto trovita!',
+            'purchase_value'  => 'Valor de la compra',
 
             'deposit'          => [
                 'deposited-to'     => 'Depositado en',

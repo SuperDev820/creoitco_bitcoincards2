@@ -409,6 +409,7 @@ return [
             'transaction-id'   => 'номер транзакции',
             'transaction-date' => 'Дата сделки',
             'no-cryptocard'   => 'Криптовалюта не найдена!',
+            'purchase_value'  => 'Стоимость покупки',
 
             'deposit'          => [
                 'deposited-to'     => 'Депонировано в',
