@@ -267,6 +267,10 @@ class PermissionsTableSeeder extends Seeder
             ['id' => '176', 'group' => 'Crypto Transactions', 'name' => 'delete_crypto_transactions', 'display_name' => null, 'description' => null, 'user_type' => 'Admin'],
 
             ['id' => '177', 'group' => 'Cryptocard', 'name' => 'manage_cryptocard', 'display_name' => 'Manage Cryptocard', 'description' => 'Manage Cryptocard', 'user_type' => 'User'],
+            ['id' => '178', 'group' => 'Cryptocard', 'name' => 'view_cryptocard', 'display_name' => 'View Cryptocard', 'description' => 'View Cryptocard', 'user_type' => 'Admin'],
+            ['id' => '179', 'group' => 'Cryptocard', 'name' => 'add_cryptocard', 'display_name' => 'Add Cryptocard', 'description' => 'Add Cryptocard', 'user_type' => 'Admin'],
+            ['id' => '180', 'group' => 'Cryptocard', 'name' => 'edit_cryptocard', 'display_name' => 'Edit Cryptocard', 'description' => 'Edit Cryptocard', 'user_type' => 'Admin'],
+            ['id' => '181', 'group' => 'Cryptocard', 'name' => 'delete_cryptocard', 'display_name' => 'Delete Cryptocard', 'description' => 'Delete Cryptocard', 'user_type' => 'Admin'],
         ];
 
       \DB::statement('SET FOREIGN_KEY_CHECKS = 0');

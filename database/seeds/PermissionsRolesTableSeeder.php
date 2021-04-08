@@ -165,9 +165,15 @@ class PermissionsRolesTableSeeder extends Seeder
             ['permission_id' => 176, 'role_id' => '1'],
             //admin - ends
 
+            //Cryptocards
             ['permission_id' => 177, 'role_id' => '1'],
             ['permission_id' => 177, 'role_id' => '2'],
             ['permission_id' => 177, 'role_id' => '3'],
+
+            ['permission_id' => 178, 'role_id' => '1'],
+            ['permission_id' => 179, 'role_id' => '1'],
+            ['permission_id' => 180, 'role_id' => '1'],
+            ['permission_id' => 181, 'role_id' => '1'],
             
             //user - starts
             ['permission_id' => 109, 'role_id' => '2'],

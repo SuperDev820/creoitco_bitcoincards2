@@ -117,6 +117,15 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['gue
     Route::get('transactions/csv', 'TransactionController@transactionCsv');
     Route::get('transactions/pdf', 'TransactionController@transactionPdf');
 
+    // cryptocards
+    Route::get('cryptocards', 'CryptocardController@index')->middleware(['permission:view_cryptocard']);
+    Route::get('cryptocards/create', 'CryptocardController@create')->middleware(['permission:add_cryptocard']);
+    Route::post('cryptocards/store', 'CryptocardController@store');
+    Route::get('cryptocards/view/{id}', 'CryptocardController@show');
+    Route::get('cryptocards/edit/{id}', 'CryptocardController@edit')->middleware(['permission:edit_cryptocard']);
+    Route::post('cryptocards/update', 'CryptocardController@update');
+    Route::get('cryptocards/delete/{id}', 'CryptocardController@destroy')->middleware(['permission:delete_cryptocard']);
+
     // Deposits
     Route::get('deposits', 'DepositController@index')->middleware(['permission:view_deposit']);
     Route::get('deposits/edit/{id}', 'DepositController@edit')->middleware(['permission:edit_deposit']);

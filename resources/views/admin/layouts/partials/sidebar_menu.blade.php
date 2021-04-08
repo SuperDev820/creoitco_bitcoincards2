@@ -70,6 +70,13 @@
         </li>
     @endif
 
+    <!-- transactions -->
+    @if(Common::has_permission(\Auth::guard('admin')->user()->id, 'view_cryptocard'))
+        <li <?= $menu == 'cryptocards' ? ' class="active treeview"' : 'treeview'?>>
+            <a href="{{ url('admin/cryptocards') }}"><i class="fa fa-credit-card"></i><span>Cryptocards</span></a>
+        </li>
+    @endif
+
     @if ($getCurrenciesPreference->value == "fiat_and_crypto")
         <!--crypto-transactions-->
         @if(Common::has_permission(\Auth::guard('admin')->user()->id, 'view_crypto_transactions'))
