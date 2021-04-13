@@ -605,7 +605,7 @@ return [
         'cryptocard'   => [
             'all-status'      => 'todos os status',
             'activate'      => 'ativar',
-            'inactivate'      => 'inativar',
+            'deactivate'      => 'desativar',
         ],
         'exchange'      => [
 

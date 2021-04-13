@@ -587,7 +587,7 @@ return [
         'cryptocard'   => [
             'all-status'      => 'All Status',
             'activate'      => 'Activate',
-            'inactivate'      => 'Inactivate',
+            'deactivate'      => 'Deactivate',
         ],
         'exchange'      => [
             'left-top'    => [

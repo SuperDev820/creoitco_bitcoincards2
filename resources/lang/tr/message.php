@@ -605,7 +605,7 @@ return [
         'cryptocard'   => [
             'all-status'      => 'tüm durum',
             'activate'      => 'etkinleştirmek',
-            'inactivate'      => 'etkisizleştirmek',
+            'deactivate'      => 'devre dışı bırakmak',
         ],
         'exchange'      => [
 

@@ -606,7 +606,7 @@ return [
         'cryptocard'   => [
             'all-status'      => 'tute-statusa',
             'activate'      => 'aktivigi',
-            'inactivate'      => 'senaktivigi',
+            'deactivate'      => 'desactivar',
         ],
         'exchange'      => [
 

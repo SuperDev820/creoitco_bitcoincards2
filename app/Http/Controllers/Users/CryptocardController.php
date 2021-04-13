@@ -32,9 +32,9 @@ class CryptocardController extends Controller
             if ($_GET['status'] == "Activate") {
                 $status = 1;
                 $data['status']       = "Activate";
-            } else if ($_GET['status'] == "Inactivate") {
+            } else if ($_GET['status'] == "Deactivate") {
                 $status = 2;
-                $data['status']       = "Inactivate";
+                $data['status']       = "Deactivate";
             }
         }
 

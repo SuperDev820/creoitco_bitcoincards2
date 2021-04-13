@@ -138,7 +138,7 @@
 	                            </div>
 
 			                    <div class="form-group">
-									<label class="control-label col-sm-3" for="site_url">Fee (%)</label>
+									<label class="control-label col-sm-3" for="fee">Fee (%)</label>
 									<div class="col-sm-9">
 										<input type="text" class="form-control" name="fee" value="{{ number_format((float)$merchant->fee, $preference['decimal_format_amount'], '.', '') }}" id="fee"
 										oninput="restrictNumberToPrefdecimal(this)">

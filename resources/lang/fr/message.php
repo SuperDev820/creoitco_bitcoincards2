@@ -610,7 +610,7 @@ return [
         'cryptocard'   => [
             'all-status'      => 'tout-statut',
             'activate'      => 'Activer',
-            'inactivate'      => 'inactiver',
+            'deactivate'      => 'désactiver',
         ],
         'exchange'      => [
 

@@ -606,7 +606,7 @@ return [
         'cryptocard'   => [
             'all-status'      => 'كل الوضع',
             'activate'      => 'تفعيل',
-            'inactivate'      => 'تعطيل',
+            'deactivate'      => 'تعطيل',
         ],
         'exchange'      => [
 

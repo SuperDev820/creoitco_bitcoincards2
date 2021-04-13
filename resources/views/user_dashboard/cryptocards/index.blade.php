@@ -30,8 +30,8 @@
                                             <option value="Activate" <?= ($status == 'Activate') ? 'selected' : '' ?>>
                                                 @lang('message.dashboard.cryptocard.activate')
                                             </option>
-                                            <option value="Inactivate" <?= ($status == 'Inactivate') ? 'selected' : '' ?>>
-                                                @lang('message.dashboard.cryptocard.inactivate')
+                                            <option value="Deactivate" <?= ($status == 'Deactivate') ? 'selected' : '' ?>>
+                                                @lang('message.dashboard.cryptocard.deactivate')
                                             </option>
                                         </select>
                                     </div>
