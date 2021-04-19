@@ -32,10 +32,13 @@ class CreateCryptocardsTable extends Migration
 
             $table->integer('activatedBy');
 
-            $table->integer('assignedToUser');
+            $table->integer('assignedToUser')->unsigned()->index()->nullable();
+            $table->foreign('assignedToUser')->references('id')->on('users');
 
-            $table->integer('wallet_id')->unsigned()->index(); //new
-            $table->foreign('wallet_id')->references('id')->on('wallets')->onUpdate('cascade')->onDelete('cascade');     
+            $table->integer('wallet_id')->unsigned()->nullable(); //new
+            $table->foreign('wallet_id')->references('id')->on('wallets');   
+            
+            $table->timestamps();
 
         });
     }

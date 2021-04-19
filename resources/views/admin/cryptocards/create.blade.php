@@ -18,6 +18,18 @@
                     <input type="hidden" value="{{csrf_token()}}" name="_token" id="token">
                         <div class="box-body">
                             <div class="form-group">
+                                <label class="control-label col-sm-3" for="code">Code</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" name="code" value="" id="code">
+                                    @if($errors->has('code'))
+                                        <span class="error">
+                                            <strong class="text-danger">{{ $errors->first('code') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
                                 <label class="control-label col-sm-3" for="BTC">BTC</label>
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control" name="BTC" value="" id="BTC"
@@ -74,9 +86,21 @@
                             </div>
 
                             <div class="form-group">
+                                <label class="control-label col-sm-3" for="user">User</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" name="user" value="" id="user">
+                                    @if($errors->has('user'))
+                                        <span class="error">
+                                            <strong class="text-danger">{{ $errors->first('user') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label class="control-label col-sm-3" for="wallet_id">Wallet</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" name="wallet_id" value="" id="wallet_id">
+                                    <input type="number" class="form-control" name="wallet_id" value="" id="wallet_id">
                                     @if($errors->has('wallet_id'))
                                         <span class="error">
                                             <strong class="text-danger">{{ $errors->first('wallet_id') }}</strong>
@@ -128,6 +152,9 @@
 
     $('#cryptocard_form').validate({
         rules: {
+            code: {
+                required: true,
+            },
             BTC: {
                 required: true,
                 number: true,
@@ -142,8 +169,11 @@
                 required: true,
                 number: true,
             },
+            user: {
+                required: true,
+            },
             wallet_id: {
-                require: true,
+                required: true,
                 number: true,
             }
         },
@@ -164,5 +194,3 @@
 
 </script>
 @endpush
-
-

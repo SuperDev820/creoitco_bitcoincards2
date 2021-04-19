@@ -53,6 +53,12 @@ class CryptocardsDataTable extends DataTable
                 }
                 return $status;
             })
+            ->addColumn('assignedToUser', function ($cryptocard)
+            {
+                $assignedToUser = $cryptocard->user->first_name.' '.$cryptocard->user->last_name;
+
+                return $assignedToUser;
+            })
             ->addColumn('wallet_id', function ($cryptocard)
             {
                 return $cryptocard->wallet_id;
@@ -70,7 +76,32 @@ class CryptocardsDataTable extends DataTable
 
     public function query()
     {
-        $query = Cryptocard::with(['wallet:id,user_id,currency_id,balance'])->select('cryptocards.*');
+        if (isset($_GET['btn']))
+        {
+            $user     = $_GET['user_id'];
+
+            if (empty($_GET['from']))
+            {
+                $from  = null;
+                $to    = null;
+                $query = (new Cryptocard())->getCryptocardsList($from, $to, $user);
+            }
+            else
+            {
+                $from         = setDateForDb($_GET['from']);
+                $to           = setDateForDb($_GET['to']);
+                $query = (new Cryptocard())->getCryptocardsList($from, $to, $user);
+            }
+        }
+        else
+        {
+            $from     = null;
+            $to       = null;
+            $user     = null;
+
+            $query = (new Cryptocard())->getCryptocardsList($from, $to, $user);
+
+        }
         return $this->applyScopes($query);
     }
 
@@ -94,6 +125,9 @@ class CryptocardsDataTable extends DataTable
             ->addColumn(['data' => 'status', 'name' => 'cryptocards.status', 'title' => 'Status'])
 
             ->addColumn(['data' => 'activatedFrom', 'name' => 'cryptocards.activatedFrom', 'title' => 'Activated From'])
+
+            ->addColumn(['data' => 'assignedToUser', 'name' => 'user.first_name', 'title' => 'Assigned To User', 'visible' => false])
+            ->addColumn(['data' => 'assignedToUser', 'name' => 'user.last_name', 'title' => 'Assigned To User'])
 
             ->addColumn(['data' => 'wallet_id', 'name' => 'cryptocards.wallet_id', 'title' => 'Wallet'])
 

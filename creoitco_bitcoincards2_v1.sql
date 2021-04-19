@@ -30,32 +30,57 @@ CREATE TABLE `activity_logs` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `activity_logs_user_id_index` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 
 /*Data for the table `activity_logs` */
 
 insert  into `activity_logs`(`id`,`user_id`,`type`,`ip_address`,`browser_agent`,`created_at`,`updated_at`) values 
-(1,1,'Admin','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36','2021-02-28 01:12:06','2021-02-28 01:12:06'),
-(2,1,'User','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4421.0 Safari/537.36 Edg/90.0.810.0','2021-02-28 01:23:50','2021-02-28 01:23:50'),
-(3,2,'User','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4421.0 Safari/537.36 Edg/90.0.810.0','2021-02-28 02:00:39','2021-02-28 02:00:39'),
-(4,2,'User','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4421.0 Safari/537.36 Edg/90.0.810.0','2021-02-28 04:23:10','2021-02-28 04:23:10'),
-(5,3,'User','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4421.0 Safari/537.36 Edg/90.0.810.0','2021-02-28 05:47:58','2021-02-28 05:47:58'),
-(6,1,'Admin','91.141.0.191','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36','2021-02-28 20:03:10','2021-02-28 20:03:10'),
-(7,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36','2021-03-02 14:32:01','2021-03-02 14:32:01'),
-(8,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36','2021-03-02 14:32:44','2021-03-02 14:32:44'),
-(9,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36','2021-03-03 02:37:56','2021-03-03 02:37:56'),
-(10,4,'User','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 18:36:46','2021-03-26 18:36:46'),
-(11,4,'User','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 18:58:53','2021-03-26 18:58:53'),
-(12,3,'User','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 19:00:56','2021-03-26 19:00:56'),
-(13,1,'Admin','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 19:02:39','2021-03-26 19:02:39'),
-(14,4,'User','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-27 00:16:26','2021-03-27 00:16:26'),
-(15,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-27 00:19:05','2021-03-27 00:19:05'),
-(16,2,'Admin','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-27 00:19:57','2021-03-27 00:19:57'),
-(17,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-28 00:52:06','2021-03-28 00:52:06'),
-(18,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-29 21:07:06','2021-03-29 21:07:06'),
-(19,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-04-01 03:57:16','2021-04-01 03:57:16'),
-(20,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-04-01 12:22:30','2021-04-01 12:22:30'),
-(21,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-04-02 05:09:19','2021-04-02 05:09:19');
+(1,1,'Admin','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36','2021-02-27 19:12:06','2021-02-27 19:12:06'),
+(2,1,'User','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4421.0 Safari/537.36 Edg/90.0.810.0','2021-02-27 19:23:50','2021-02-27 19:23:50'),
+(3,2,'User','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4421.0 Safari/537.36 Edg/90.0.810.0','2021-02-27 20:00:39','2021-02-27 20:00:39'),
+(4,2,'User','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4421.0 Safari/537.36 Edg/90.0.810.0','2021-02-27 22:23:10','2021-02-27 22:23:10'),
+(5,3,'User','77.119.131.153','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4421.0 Safari/537.36 Edg/90.0.810.0','2021-02-27 23:47:58','2021-02-27 23:47:58'),
+(6,1,'Admin','91.141.0.191','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36','2021-02-28 14:03:10','2021-02-28 14:03:10'),
+(7,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36','2021-03-02 08:32:01','2021-03-02 08:32:01'),
+(8,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36','2021-03-02 08:32:44','2021-03-02 08:32:44'),
+(9,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36','2021-03-02 20:37:56','2021-03-02 20:37:56'),
+(10,4,'User','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 12:36:46','2021-03-26 12:36:46'),
+(11,4,'User','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 12:58:53','2021-03-26 12:58:53'),
+(12,3,'User','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 13:00:56','2021-03-26 13:00:56'),
+(13,1,'Admin','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 13:02:39','2021-03-26 13:02:39'),
+(14,4,'User','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 18:16:26','2021-03-26 18:16:26'),
+(15,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 18:19:05','2021-03-26 18:19:05'),
+(16,2,'Admin','178.113.93.66','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-26 18:19:57','2021-03-26 18:19:57'),
+(17,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-27 18:52:06','2021-03-27 18:52:06'),
+(18,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-29 15:07:06','2021-03-29 15:07:06'),
+(19,4,'User','188.43.235.177','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-03-31 21:57:16','2021-03-31 21:57:16'),
+(20,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-04-01 06:22:30','2021-04-01 06:22:30'),
+(21,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-04-01 23:09:19','2021-04-01 23:09:19'),
+(22,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-04-02 08:10:11','2021-04-02 08:10:11'),
+(23,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-04-02 12:51:20','2021-04-02 12:51:20'),
+(24,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36','2021-04-02 21:21:17','2021-04-02 21:21:17'),
+(25,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-07 06:29:23','2021-04-07 06:29:23'),
+(26,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-07 15:22:12','2021-04-07 15:22:12'),
+(27,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-07 15:22:40','2021-04-07 15:22:40'),
+(28,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-08 15:48:32','2021-04-08 15:48:32'),
+(29,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-08 19:34:39','2021-04-08 19:34:39'),
+(30,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-09 13:49:49','2021-04-09 13:49:49'),
+(31,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-09 15:44:51','2021-04-09 15:44:51'),
+(32,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-11 01:23:02','2021-04-11 01:23:02'),
+(33,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-11 01:28:05','2021-04-11 01:28:05'),
+(34,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-11 13:19:09','2021-04-11 13:19:09'),
+(35,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-11 18:15:08','2021-04-11 18:15:08'),
+(36,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-11 20:47:40','2021-04-11 20:47:40'),
+(37,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-11 21:07:31','2021-04-11 21:07:31'),
+(38,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-12 12:26:08','2021-04-12 12:26:08'),
+(39,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-12 12:33:54','2021-04-12 12:33:54'),
+(40,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','2021-04-12 18:30:08','2021-04-12 18:30:08'),
+(41,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-17 04:35:25','2021-04-17 04:35:25'),
+(42,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-17 04:35:41','2021-04-17 04:35:41'),
+(43,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-17 07:33:53','2021-04-17 07:33:53'),
+(44,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-18 16:26:13','2021-04-18 16:26:13'),
+(45,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-18 16:26:36','2021-04-18 16:26:36'),
+(46,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-19 05:23:19','2021-04-19 05:23:19');
 
 /*Table structure for table `admins` */
 
@@ -84,9 +109,9 @@ CREATE TABLE `admins` (
 /*Data for the table `admins` */
 
 insert  into `admins`(`id`,`role_id`,`first_name`,`last_name`,`phone`,`email`,`password`,`status`,`remember_token`,`created_at`,`updated_at`,`picture`) values 
-(1,1,'Admin','Istrator',NULL,'office@creo-it.com','$2y$10$y2urTRv3EYjQUe/IMpBUf.2BnE1eoRpxC4xrf.dlebZijipwuxrIW','Active',NULL,'2021-02-28 01:11:51','2021-02-28 01:11:51',''),
-(2,1,'Admin2','Manual',NULL,'martin.glettler@gmail.com','$2y$10$y2urTRv3EYjQUe/IMpBUf.2BnE1eoRpxC4xrf.dlebZijipwuxrIW','Active',NULL,'2021-02-28 06:21:48','2021-02-28 06:21:48',''),
-(3,1,'Владимир','Окулович',NULL,'vladimir.okulovich2019@mail.ru','$2y$10$y2urTRv3EYjQUe/IMpBUf.2BnE1eoRpxC4xrf.dlebZijipwuxrIW','Active',NULL,'2021-02-28 20:04:12','2021-02-28 20:04:12','');
+(1,1,'Admin','Istrator',NULL,'office@creo-it.com','$2y$10$y2urTRv3EYjQUe/IMpBUf.2BnE1eoRpxC4xrf.dlebZijipwuxrIW','Active',NULL,'2021-02-27 19:11:51','2021-02-27 19:11:51',''),
+(2,1,'Admin2','Manual',NULL,'martin.glettler@gmail.com','$2y$10$y2urTRv3EYjQUe/IMpBUf.2BnE1eoRpxC4xrf.dlebZijipwuxrIW','Active',NULL,'2021-02-28 00:21:48','2021-02-28 00:21:48',''),
+(3,1,'Владимир','Окулович',NULL,'vladimir.okulovich2019@mail.ru','$2y$10$y2urTRv3EYjQUe/IMpBUf.2BnE1eoRpxC4xrf.dlebZijipwuxrIW','Active',NULL,'2021-02-28 14:04:12','2021-02-28 14:04:12','');
 
 /*Table structure for table `app_store_credentials` */
 
@@ -509,7 +534,7 @@ CREATE TABLE `crypto_currencies_settings` (
 /*Data for the table `crypto_currencies_settings` */
 
 insert  into `crypto_currencies_settings`(`id`,`payment_method_id`,`network`,`network_credentials`,`status`,`created_at`,`updated_at`) values 
-(1,9,'BTCTEST','{\"api_key\":\"e93e-0322-01a8-a1c6\",\"pin\":\"Terranoid123\",\"address\":\"2NAivqjcNivqUGFt8mADnnrLzP3Ywh2pf7C\"}','Active','2021-02-28 01:19:02','2021-02-28 04:19:44');
+(1,9,'BTCTEST','{\"api_key\":\"e93e-0322-01a8-a1c6\",\"pin\":\"Terranoid123\",\"address\":\"2NAivqjcNivqUGFt8mADnnrLzP3Ywh2pf7C\"}','Active','2021-02-27 19:19:02','2021-02-27 22:19:44');
 
 /*Table structure for table `cryptoapi_logs` */
 
@@ -536,9 +561,9 @@ CREATE TABLE `cryptoapi_logs` (
 /*Data for the table `cryptoapi_logs` */
 
 insert  into `cryptoapi_logs`(`id`,`payment_method_id`,`object_id`,`object_type`,`network`,`payload`,`confirmations`,`created_at`,`updated_at`) values 
-(1,9,4,'wallet_address','BTCTEST','{\"network\":\"BTCTEST\",\"user_id\":1,\"address\":\"2MsnNCGES83hzqDXDqSXvfw8xCtgcbFNLXT\",\"label\":\"3_email@gmail.com\"}',0,'2021-02-28 05:47:48','2021-02-28 05:47:48'),
-(2,9,4,'crypto_sent','BTCTEST','{\"network\":\"BTCTEST\",\"txid\":\"83846cf6207c92b77357222785a3b9f94506cc8bd39d67cca11665594c47a493\",\"amount_withdrawn\":\"0.00005502\",\"amount_sent\":\"0.00002000\",\"network_fee\":\"0.00003502\",\"blockio_fee\":\"0.00000000\",\"senderAddress\":\"2NAivqjcNivqUGFt8mADnnrLzP3Ywh2pf7C\",\"receiverAddress\":\"2MsnNCGES83hzqDXDqSXvfw8xCtgcbFNLXT\"}',0,'2021-02-28 05:51:53','2021-02-28 05:51:53'),
-(3,9,6,'wallet_address','BTCTEST','{\"network\":\"BTCTEST\",\"user_id\":2,\"address\":\"2Mw3HMMtG3XrN6cnVmFZse4sNYjPybiqYa7\",\"label\":\"4_vladimir.okulovich2019@mail.ru\"}',0,'2021-03-02 14:31:53','2021-03-02 14:31:53');
+(1,9,4,'wallet_address','BTCTEST','{\"network\":\"BTCTEST\",\"user_id\":1,\"address\":\"2MsnNCGES83hzqDXDqSXvfw8xCtgcbFNLXT\",\"label\":\"3_email@gmail.com\"}',0,'2021-02-27 23:47:48','2021-02-27 23:47:48'),
+(2,9,4,'crypto_sent','BTCTEST','{\"network\":\"BTCTEST\",\"txid\":\"83846cf6207c92b77357222785a3b9f94506cc8bd39d67cca11665594c47a493\",\"amount_withdrawn\":\"0.00005502\",\"amount_sent\":\"0.00002000\",\"network_fee\":\"0.00003502\",\"blockio_fee\":\"0.00000000\",\"senderAddress\":\"2NAivqjcNivqUGFt8mADnnrLzP3Ywh2pf7C\",\"receiverAddress\":\"2MsnNCGES83hzqDXDqSXvfw8xCtgcbFNLXT\"}',0,'2021-02-27 23:51:53','2021-02-27 23:51:53'),
+(3,9,6,'wallet_address','BTCTEST','{\"network\":\"BTCTEST\",\"user_id\":2,\"address\":\"2Mw3HMMtG3XrN6cnVmFZse4sNYjPybiqYa7\",\"label\":\"4_vladimir.okulovich2019@mail.ru\"}',0,'2021-03-02 08:31:53','2021-03-02 08:31:53');
 
 /*Table structure for table `cryptocards` */
 
@@ -554,18 +579,22 @@ CREATE TABLE `cryptocards` (
   `activatedFrom` datetime NOT NULL,
   `status` int(11) NOT NULL,
   `activatedBy` int(11) NOT NULL,
-  `assignedToUser` int(11) NOT NULL,
-  `wallet_id` int(10) unsigned NOT NULL,
+  `assignedToUser` int(10) unsigned DEFAULT NULL,
+  `wallet_id` int(10) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `cryptocards_wallet_id_index` (`wallet_id`),
-  CONSTRAINT `cryptocards_wallet_id_foreign` FOREIGN KEY (`wallet_id`) REFERENCES `wallets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  KEY `cryptocards_wallet_id_foreign` (`wallet_id`),
+  KEY `cryptocards_assignedtouser_index` (`assignedToUser`),
+  CONSTRAINT `cryptocards_assignedtouser_foreign` FOREIGN KEY (`assignedToUser`) REFERENCES `users` (`id`),
+  CONSTRAINT `cryptocards_wallet_id_foreign` FOREIGN KEY (`wallet_id`) REFERENCES `wallets` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `cryptocards` */
 
-insert  into `cryptocards`(`id`,`code`,`BTC`,`BTC_EUR`,`EUR`,`rateTimestamp`,`activatedFrom`,`status`,`activatedBy`,`assignedToUser`,`wallet_id`) values 
-(1,'7AD67DHJ8',0.00,45315.00,100.00,'2021-03-26 19:50:52','2021-03-26 20:49:56',1,1,2,2),
-(2,'YD787DkJK8',0.00,45319.00,200.00,'2021-03-27 00:39:14','2021-03-27 01:38:14',1,1,1,1);
+insert  into `cryptocards`(`id`,`code`,`BTC`,`BTC_EUR`,`EUR`,`rateTimestamp`,`activatedFrom`,`status`,`activatedBy`,`assignedToUser`,`wallet_id`,`created_at`,`updated_at`) values 
+(1,'7AD67DHJ8',0.00,45315.00,100.00,'2021-03-26 19:50:52','2021-03-26 20:49:56',1,1,2,2,NULL,NULL),
+(2,'YD787DkJK8',0.00,45319.00,200.00,'2021-03-27 00:39:14','2021-03-27 01:38:14',1,1,1,1,NULL,NULL);
 
 /*Table structure for table `currencies` */
 
@@ -683,8 +712,8 @@ CREATE TABLE `deposits` (
 /*Data for the table `deposits` */
 
 insert  into `deposits`(`id`,`user_id`,`currency_id`,`payment_method_id`,`bank_id`,`file_id`,`uuid`,`charge_percentage`,`charge_fixed`,`amount`,`status`,`created_at`,`updated_at`) values 
-(1,1,3,1,NULL,NULL,'5AE8427D75DAD',0.00000000,0.00000000,10.00000000,'Success','2021-02-28 01:38:28','2021-02-28 01:38:28'),
-(2,3,3,1,NULL,NULL,'A6E63EA9467F1',0.00000000,0.00000000,100.00000000,'Success','2021-02-28 05:50:53','2021-02-28 05:50:53');
+(1,1,3,1,NULL,NULL,'5AE8427D75DAD',0.00000000,0.00000000,10.00000000,'Success','2021-02-27 19:38:28','2021-02-27 19:38:28'),
+(2,3,3,1,NULL,NULL,'A6E63EA9467F1',0.00000000,0.00000000,100.00000000,'Success','2021-02-27 23:50:53','2021-02-27 23:50:53');
 
 /*Table structure for table `device_logs` */
 
@@ -1186,27 +1215,27 @@ insert  into `fees_limits`(`id`,`currency_id`,`transaction_type_id`,`payment_met
 (12,1,3,NULL,0.00000000,0.00000000,1.00000000,NULL,'0','Yes',NULL,NULL),
 (13,1,5,NULL,0.00000000,0.00000000,1.00000000,NULL,'0','Yes',NULL,NULL),
 (14,1,10,NULL,0.00000000,0.00000000,1.00000000,NULL,'0','Yes',NULL,NULL),
-(15,3,1,1,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(16,3,1,2,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(17,3,1,3,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(18,3,1,4,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(19,3,1,5,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(20,3,1,6,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(21,3,1,7,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(22,3,1,8,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(23,3,1,9,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(24,3,2,1,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(25,3,2,2,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(26,3,2,3,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(27,3,2,4,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(28,3,2,5,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(29,3,2,6,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(30,3,2,7,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(31,3,2,8,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(32,3,2,9,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(33,3,3,NULL,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(34,3,5,NULL,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01'),
-(35,3,10,NULL,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-28 01:13:01','2021-02-28 01:13:01');
+(15,3,1,1,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(16,3,1,2,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(17,3,1,3,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(18,3,1,4,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(19,3,1,5,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(20,3,1,6,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(21,3,1,7,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(22,3,1,8,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(23,3,1,9,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(24,3,2,1,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(25,3,2,2,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(26,3,2,3,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(27,3,2,4,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(28,3,2,5,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(29,3,2,6,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(30,3,2,7,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(31,3,2,8,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(32,3,2,9,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(33,3,3,NULL,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(34,3,5,NULL,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01'),
+(35,3,10,NULL,0.00000000,0.00000000,1.00000000,NULL,'0','Yes','2021-02-27 19:13:01','2021-02-27 19:13:01');
 
 /*Table structure for table `files` */
 
@@ -1283,7 +1312,7 @@ CREATE TABLE `merchant_apps` (
 /*Data for the table `merchant_apps` */
 
 insert  into `merchant_apps`(`id`,`merchant_id`,`client_id`,`client_secret`,`created_at`,`updated_at`) values 
-(1,2,'y2f6lns5PCE7BujSGWSm68iYVXKY9b','h81b6Nl99fW7VgzkBLdysdv1ImjgdOUvKiA148FphknqgXTYAoDa2rQg2T9WJTC8qzDDyhrIKrRcIdqgP4SZqVrBE7rAQYOWEPcH','2021-02-28 02:11:48','2021-02-28 02:11:48');
+(1,2,'y2f6lns5PCE7BujSGWSm68iYVXKY9b','h81b6Nl99fW7VgzkBLdysdv1ImjgdOUvKiA148FphknqgXTYAoDa2rQg2T9WJTC8qzDDyhrIKrRcIdqgP4SZqVrBE7rAQYOWEPcH','2021-02-27 20:11:48','2021-02-27 20:11:48');
 
 /*Table structure for table `merchant_groups` */
 
@@ -1374,9 +1403,9 @@ CREATE TABLE `merchants` (
 /*Data for the table `merchants` */
 
 insert  into `merchants`(`id`,`user_id`,`currency_id`,`merchant_group_id`,`merchant_uuid`,`business_name`,`site_url`,`type`,`note`,`logo`,`fee`,`status`,`created_at`,`updated_at`) values 
-(1,1,3,3,'AE1E746DEDBDD','OMV Tankstelle1','http://www.tanken.com','standard','some note','1614443196.png',1.50000000,'Approved','2021-02-28 01:26:36','2021-02-28 04:08:10'),
-(2,2,3,1,'7240814967E92','Tankstelle 2','https://www.shit.com','express','was ist express ?',NULL,0.51000000,'Approved','2021-02-28 02:11:48','2021-02-28 02:12:29'),
-(3,3,3,1,'9CE53742AF890','Tankstelle 3','http://www.email.com','standard','super',NULL,0.51000000,'Approved','2021-02-28 05:49:22','2021-02-28 05:50:00');
+(1,1,3,3,'AE1E746DEDBDD','OMV Tankstelle1','http://www.tanken.com','standard','some note','1614443196.png',1.50000000,'Approved','2021-02-27 19:26:36','2021-02-27 22:08:10'),
+(2,2,3,1,'7240814967E92','Tankstelle 2','https://www.shit.com','express','was ist express ?',NULL,0.51000000,'Approved','2021-02-27 20:11:48','2021-02-27 20:12:29'),
+(3,3,3,1,'9CE53742AF890','Tankstelle 3','http://www.email.com','standard','super',NULL,0.51000000,'Approved','2021-02-27 23:49:22','2021-02-27 23:50:00');
 
 /*Table structure for table `metas` */
 
@@ -1389,7 +1418,7 @@ CREATE TABLE `metas` (
   `description` text DEFAULT NULL,
   `keywords` text DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
 
 /*Data for the table `metas` */
 
@@ -1485,7 +1514,8 @@ insert  into `metas`(`id`,`url`,`title`,`description`,`keywords`) values
 (89,'crpto/send/confirm','Send Crypto Confirm','Send Crypto Confirm',''),
 (90,'crpto/send/success','Send Crypto Success','Send Crypto Success',''),
 (91,'crpto/receive/{walletCurrencyCode}/{walletId}','Receive Crypto','Receive Crypto',''),
-(92,'user/crypto/preference-disabled','Crypto Disabled','Crypto Disabled','');
+(92,'user/crypto/preference-disabled','Crypto Disabled','Crypto Disabled',''),
+(93,'cryptocards','Cryptocards','Cryptocards',NULL);
 
 /*Table structure for table `migrations` */
 
@@ -1496,7 +1526,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(191) NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
 
 /*Data for the table `migrations` */
 
@@ -1563,8 +1593,8 @@ insert  into `migrations`(`id`,`migration`,`batch`) values
 (60,'2019_10_22_054339_create_notification_settings_table',1),
 (61,'2020_01_01_134930_create_crypto_currencies_settings_table',1),
 (62,'2020_01_04_131517_create_cryptoapi_logs_table',1),
-(63,'2020_01_27_101740_create_sms_configs_table',1),
-(65,'2021_04_01_170430_create_cryptocards_table',2);
+(67,'2020_01_27_101740_create_sms_configs_table',2),
+(69,'2021_04_01_170430_create_cryptocards_table',3);
 
 /*Table structure for table `notification_settings` */
 
@@ -1806,7 +1836,7 @@ CREATE TABLE `payout_settings` (
 /*Data for the table `payout_settings` */
 
 insert  into `payout_settings`(`id`,`user_id`,`type`,`email`,`account_name`,`account_number`,`bank_branch_name`,`bank_branch_city`,`bank_branch_address`,`country`,`swift_code`,`bank_name`,`default_payout`,`created_at`,`updated_at`) values 
-(1,1,3,'test@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'2021-02-28 01:24:20','2021-02-28 01:24:20');
+(1,1,3,'test@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'2021-02-27 19:24:20','2021-02-27 19:24:20');
 
 /*Table structure for table `permission_role` */
 
@@ -1994,7 +2024,11 @@ insert  into `permission_role`(`role_id`,`permission_id`) values
 (1,176),
 (1,177),
 (2,177),
-(3,177);
+(3,177),
+(1,178),
+(1,179),
+(1,180),
+(1,181);
 
 /*Table structure for table `permissions` */
 
@@ -2011,175 +2045,179 @@ CREATE TABLE `permissions` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `permissions_name_unique` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=178 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=182 DEFAULT CHARSET=utf8;
 
 /*Data for the table `permissions` */
 
 insert  into `permissions`(`id`,`group`,`name`,`display_name`,`description`,`user_type`,`created_at`,`updated_at`) values 
-(1,'User','view_user','View User','View User','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(2,'User','add_user','Add User','Add User','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(3,'User','edit_user','Edit User','Edit User','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(4,'User','delete_user','Delete User','Delete User','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(5,'Transaction','view_transaction','View Transaction','View Transaction','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(6,'Transaction','add_transaction',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(7,'Transaction','edit_transaction','Edit Transaction','Edit Transaction','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(8,'Transaction','delete_transaction',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(9,'Deposit','view_deposit','View Deposit','View Deposit','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(10,'Deposit','add_deposit',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(11,'Deposit','edit_deposit','Edit Deposit','Edit Deposit','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(12,'Deposit','delete_deposit',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(13,'Withdrawal','view_withdrawal','View Withdrawal','View Withdrawal','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(14,'Withdrawal','add_withdrawal',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(15,'Withdrawal','edit_withdrawal','Edit Withdrawal','Edit Withdrawal','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(16,'Withdrawal','delete_withdrawal',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(17,'Transfer','view_transfer','View Transfer','View Transfer','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(18,'Transfer','add_transfer',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(19,'Transfer','edit_transfer','Edit Transfer','Edit Transfer','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(20,'Transfer','delete_transfer',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(21,'Exchange','view_exchange','View Exchange','View Exchange','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(22,'Exchange','add_exchange',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(23,'Exchange','edit_exchange','Edit Exchange','Edit Exchange','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(24,'Exchange','delete_exchange',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(29,'Request Payment','view_request_payment','View Request Payment','View Request Payment','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(30,'Request Payment','add_request_payment',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(31,'Request Payment','edit_request_payment','Edit Request Payment','Edit Request Payment','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(32,'Request Payment','delete_request_payment',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(33,'Revenue','view_revenue','View Revenue','View Revenue','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(34,'Revenue','add_revenue',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(35,'Revenue','edit_revenue',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(36,'Revenue','delete_revenue',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(37,'Email Template','view_email_template','View Email Template','View Email Template','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(38,'Email Template','add_email_template',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(39,'Email Template','edit_email_template','Edit Email Template','Edit Email Template','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(40,'Email Template','delete_email_template',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(41,'Activity Log','view_activity_log','View Activity Log','View Activity Log','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(42,'Activity Log','add_activity_log',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(43,'Activity Log','edit_activity_log',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(44,'Activity Log','delete_activity_log',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(45,'General Setting','view_general_setting',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(46,'General Setting','add_general_setting',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(47,'General Setting','edit_general_setting','Edit General Setting','Edit General Setting','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(48,'General Setting','delete_general_setting',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(49,'Social Links','view_social_links','View Social Links','View Social Links','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(50,'Social Links','add_social_links',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(51,'Social Links','edit_social_links','Edit Social Links','Edit Social Links','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(52,'Social Links','delete_social_links',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(53,'API Credentials','view_api_credentials','View API Credentials','View API Credentials','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(54,'API Credentials','add_api_credentials',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(55,'API Credentials','edit_api_credentials','Edit API Credentials','Edit API Credentials','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(56,'API Credentials','delete_api_credentials',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(57,'Payment Methods','view_payment_methods','View Payment Methods','View Payment Methods','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(58,'Payment Methods','add_payment_methods',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(59,'Payment Methods','edit_payment_methods','Edit Payment Methods','Edit Payment Methods','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(60,'Payment Methods','delete_payment_methods',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(61,'Email Setting','view_email_setting','View Email Setting','View Email Setting','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(62,'Email Setting','add_email_setting',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(63,'Email Setting','edit_email_setting','Edit Email Setting','Edit Email Setting','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(64,'Email Setting','delete_email_setting',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(65,'Currency','view_currency','View Currency','View Currency','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(66,'Currency','add_currency','Add Currency','Add Currency','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(67,'Currency','edit_currency','Edit Currency','Edit Currency','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(68,'Currency','delete_currency','Delete Currency','Delete Currency','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(69,'Country','view_country','View Country','View Country','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(70,'Country','add_country','Add Country','Add Country','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(71,'Country','edit_country','Edit Country','Edit Country','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(72,'Country','delete_country','Delete Country','Delete Country','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(73,'Language','view_language','View Language','View Language','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(74,'Language','add_language','Add Language','Add Language','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(75,'Language','edit_language','Edit Language','Edit Language','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(76,'Language','delete_language','Delete Language','Delete Language','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(77,'Role','view_role','View Role','View Role','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(78,'Role','add_role','Add Role','Add Role','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(79,'Role','edit_role','Edit Role','Edit Role','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(80,'Role','delete_role','Delete Role','Delete Role','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(85,'Database Backup','view_database_backup','View Database Backup','View Database Backup','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(86,'Database Backup','add_database_backup','Add Database Backup','Add Database Backup','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(87,'Database Backup','edit_database_backup','Edit Database Backup','Edit Database Backup','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(88,'Database Backup','delete_database_backup',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(89,'Meta','view_meta','View Meta','View Meta','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(90,'Meta','add_meta',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(91,'Meta','edit_meta','Edit Meta','Edit Meta','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(92,'Meta','delete_meta',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(93,'Page','view_page','View Page','View Page','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(94,'Page','add_page','Add Page','Add Page','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(95,'Page','edit_page','Edit Page','Edit Page','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(96,'Page','delete_page','Delete Page','Delete Page','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(97,'Preference','view_preference','View Preference','View Preference','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(98,'Preference','add_preference',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(99,'Preference','edit_preference','Edit Preference','Edit Preference','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(100,'Preference','delete_preference',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(101,'Merchant','view_merchant','View Merchant','View Merchant','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(102,'Merchant','add_merchant',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(103,'Merchant','edit_merchant','Edit Merchant','Edit Merchant','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(104,'Merchant','delete_merchant',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(105,'Merchant Payment','view_merchant_payment','View Merchant Payment','View Merchant Payment','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(106,'Merchant Payment','add_merchant_payment',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(107,'Merchant Payment','edit_merchant_payment','Edit Merchant Payment','Edit Merchant Payment','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(108,'Merchant Payment','delete_merchant_payment',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(109,'Transaction','manage_transaction','Manage Transaction','Manage Transaction','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(110,'Deposit','manage_deposit','Manage Deposit','Manage Deposit','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(111,'Withdrawal','manage_withdrawal','Manage Withdrawal','Manage Withdrawal','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(112,'Transfer','manage_transfer','Manage Transfer','Manage Transfer','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(113,'Exchange','manage_exchange','Manage Exchange','Manage Exchange','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(115,'Request Payment','manage_request_payment','Manage Request Payment','Manage Request Payment','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(116,'Merchant','manage_merchant','Manage Merchant','Manage Merchant','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(117,'Merchant Payment','manage_merchant_payment','Manage Merchant Payment','Manage Merchant Payment','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(118,'User Group','view_group','View User Group','View User Group','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(119,'User Group','add_group','Add User Group','Add User Group','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(120,'User Group','edit_group','Edit User Group','Edit User Group','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(121,'User Group','delete_group','Delete User Group','Delete User Group','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(122,'Admins','view_admins','View Admins','View Admins','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(123,'Admins','add_admin','Add Admin','Add Admin','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(124,'Admins','edit_admin','Edit Admin','Edit Admin','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(125,'Admins','delete_admin','Delete Admin','Delete Admin','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(126,'Disputes','view_disputes','View Disputes','View Disputes','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(127,'Disputes','add_dispute',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(128,'Disputes','edit_dispute','Edit Dispute','Edit Dispute','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(129,'Disputes','delete_dispute',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(130,'Tickets','view_tickets','View Tickets','View Tickets','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(131,'Tickets','add_ticket','Add Ticket','Add Ticket','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(132,'Tickets','edit_ticket','Edit Ticket','Edit Ticket','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(133,'Tickets','delete_ticket','Delete Ticket','Delete Ticket','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(134,'Dispute','manage_dispute','Manage Dispute','Manage Dispute','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(135,'Ticket','manage_ticket','Manage Ticket','Manage Ticket','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(136,'Settings','manage_setting','Manage Settings','Manage Settings','User','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(137,'AppStore Credentials','view_appstore_credentials','View AppStore Credentials','View AppStore Credentials','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(138,'AppStore Credentials','add_appstore_credentials',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(139,'AppStore Credentials','edit_appstore_credentials','Edit AppStore Credentials','Edit AppStore Credentials','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(140,'AppStore Credentials','delete_appstore_credentials',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(145,'Merchant Groups','view_merchant_group','View Merchant Group','View Merchant Group','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(146,'Merchant Groups','add_merchant_group','Add Merchant Group','Add Merchant Group','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(147,'Merchant Groups','edit_merchant_group','Edit Merchant Group','Edit Merchant Group','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(148,'Merchant Groups','delete_merchant_group','Delete Merchant Group','Delete Merchant Group','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(149,'SMS Setting','view_sms_setting','View SMS Setting','View SMS Setting','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(150,'SMS Setting','add_sms_setting',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(151,'SMS Setting','edit_sms_setting','Edit SMS Setting','Edit SMS Setting','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(152,'SMS Setting','delete_sms_setting',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(153,'Sms Template','view_sms_template','View Sms Template','View Sms Template','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(154,'Sms Template','add_sms_template',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(155,'Sms Template','edit_sms_template','Edit Sms Template','Edit Sms Template','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(156,'Sms Template','delete_sms_template',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(157,'Identity Verificattion','view_identity_verfication','View Identity Verificattion','View Identity Verificattion','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(158,'Identity Verificattion','add_identity_verfication',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(159,'Identity Verificattion','edit_identity_verfication','Edit Identity Verificattion','Edit Identity Verificattion','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(160,'Identity Verificattion','delete_identity_verfication',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(161,'Address Verificattion','view_address_verfication','View Address Verificattion','View Address Verificattion','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(162,'Address Verificattion','add_address_verfication',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(163,'Address Verificattion','edit_address_verfication','Edit Address Verificattion','Edit Address Verificattion','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(164,'Address Verificattion','delete_address_verfication',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(165,'Enable WooCommerce','view_enable_woocommerce','View Enable WooCommerce','View Enable WooCommerce','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(166,'Enable WooCommerce','add_enable_woocommerce',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(167,'Enable WooCommerce','edit_enable_woocommerce','Edit Enable WooCommerce','Edit Enable WooCommerce','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(168,'Enable WooCommerce','delete_enable_woocommerce',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(169,'BlockIo Settings','view_blockio_settings','View BlockIo Settings','View BlockIo Settings','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(170,'BlockIo Settings','add_blockio_settings',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(171,'BlockIo Settings','edit_blockio_settings','Edit BlockIo Settings','Edit BlockIo Settings','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(172,'BlockIo Settings','delete_blockio_settings',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(173,'Crypto Transactions','view_crypto_transactions','View Crypto Transactions','View Crypto Transactions','Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(174,'Crypto Transactions','add_crypto_transactions',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(175,'Crypto Transactions','edit_crypto_transactions',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(176,'Crypto Transactions','delete_crypto_transactions',NULL,NULL,'Admin','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(177,'Cryptocard','manage_cryptocard','Manage Cryptocard','Manage Cryptocard','User',NULL,NULL);
+(1,'User','view_user','View User','View User','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(2,'User','add_user','Add User','Add User','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(3,'User','edit_user','Edit User','Edit User','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(4,'User','delete_user','Delete User','Delete User','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(5,'Transaction','view_transaction','View Transaction','View Transaction','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(6,'Transaction','add_transaction',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(7,'Transaction','edit_transaction','Edit Transaction','Edit Transaction','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(8,'Transaction','delete_transaction',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(9,'Deposit','view_deposit','View Deposit','View Deposit','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(10,'Deposit','add_deposit',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(11,'Deposit','edit_deposit','Edit Deposit','Edit Deposit','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(12,'Deposit','delete_deposit',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(13,'Withdrawal','view_withdrawal','View Withdrawal','View Withdrawal','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(14,'Withdrawal','add_withdrawal',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(15,'Withdrawal','edit_withdrawal','Edit Withdrawal','Edit Withdrawal','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(16,'Withdrawal','delete_withdrawal',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(17,'Transfer','view_transfer','View Transfer','View Transfer','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(18,'Transfer','add_transfer',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(19,'Transfer','edit_transfer','Edit Transfer','Edit Transfer','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(20,'Transfer','delete_transfer',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(21,'Exchange','view_exchange','View Exchange','View Exchange','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(22,'Exchange','add_exchange',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(23,'Exchange','edit_exchange','Edit Exchange','Edit Exchange','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(24,'Exchange','delete_exchange',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(29,'Request Payment','view_request_payment','View Request Payment','View Request Payment','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(30,'Request Payment','add_request_payment',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(31,'Request Payment','edit_request_payment','Edit Request Payment','Edit Request Payment','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(32,'Request Payment','delete_request_payment',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(33,'Revenue','view_revenue','View Revenue','View Revenue','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(34,'Revenue','add_revenue',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(35,'Revenue','edit_revenue',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(36,'Revenue','delete_revenue',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(37,'Email Template','view_email_template','View Email Template','View Email Template','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(38,'Email Template','add_email_template',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(39,'Email Template','edit_email_template','Edit Email Template','Edit Email Template','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(40,'Email Template','delete_email_template',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(41,'Activity Log','view_activity_log','View Activity Log','View Activity Log','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(42,'Activity Log','add_activity_log',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(43,'Activity Log','edit_activity_log',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(44,'Activity Log','delete_activity_log',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(45,'General Setting','view_general_setting',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(46,'General Setting','add_general_setting',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(47,'General Setting','edit_general_setting','Edit General Setting','Edit General Setting','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(48,'General Setting','delete_general_setting',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(49,'Social Links','view_social_links','View Social Links','View Social Links','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(50,'Social Links','add_social_links',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(51,'Social Links','edit_social_links','Edit Social Links','Edit Social Links','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(52,'Social Links','delete_social_links',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(53,'API Credentials','view_api_credentials','View API Credentials','View API Credentials','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(54,'API Credentials','add_api_credentials',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(55,'API Credentials','edit_api_credentials','Edit API Credentials','Edit API Credentials','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(56,'API Credentials','delete_api_credentials',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(57,'Payment Methods','view_payment_methods','View Payment Methods','View Payment Methods','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(58,'Payment Methods','add_payment_methods',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(59,'Payment Methods','edit_payment_methods','Edit Payment Methods','Edit Payment Methods','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(60,'Payment Methods','delete_payment_methods',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(61,'Email Setting','view_email_setting','View Email Setting','View Email Setting','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(62,'Email Setting','add_email_setting',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(63,'Email Setting','edit_email_setting','Edit Email Setting','Edit Email Setting','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(64,'Email Setting','delete_email_setting',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(65,'Currency','view_currency','View Currency','View Currency','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(66,'Currency','add_currency','Add Currency','Add Currency','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(67,'Currency','edit_currency','Edit Currency','Edit Currency','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(68,'Currency','delete_currency','Delete Currency','Delete Currency','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(69,'Country','view_country','View Country','View Country','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(70,'Country','add_country','Add Country','Add Country','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(71,'Country','edit_country','Edit Country','Edit Country','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(72,'Country','delete_country','Delete Country','Delete Country','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(73,'Language','view_language','View Language','View Language','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(74,'Language','add_language','Add Language','Add Language','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(75,'Language','edit_language','Edit Language','Edit Language','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(76,'Language','delete_language','Delete Language','Delete Language','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(77,'Role','view_role','View Role','View Role','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(78,'Role','add_role','Add Role','Add Role','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(79,'Role','edit_role','Edit Role','Edit Role','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(80,'Role','delete_role','Delete Role','Delete Role','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(85,'Database Backup','view_database_backup','View Database Backup','View Database Backup','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(86,'Database Backup','add_database_backup','Add Database Backup','Add Database Backup','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(87,'Database Backup','edit_database_backup','Edit Database Backup','Edit Database Backup','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(88,'Database Backup','delete_database_backup',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(89,'Meta','view_meta','View Meta','View Meta','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(90,'Meta','add_meta',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(91,'Meta','edit_meta','Edit Meta','Edit Meta','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(92,'Meta','delete_meta',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(93,'Page','view_page','View Page','View Page','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(94,'Page','add_page','Add Page','Add Page','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(95,'Page','edit_page','Edit Page','Edit Page','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(96,'Page','delete_page','Delete Page','Delete Page','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(97,'Preference','view_preference','View Preference','View Preference','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(98,'Preference','add_preference',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(99,'Preference','edit_preference','Edit Preference','Edit Preference','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(100,'Preference','delete_preference',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(101,'Merchant','view_merchant','View Merchant','View Merchant','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(102,'Merchant','add_merchant',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(103,'Merchant','edit_merchant','Edit Merchant','Edit Merchant','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(104,'Merchant','delete_merchant',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(105,'Merchant Payment','view_merchant_payment','View Merchant Payment','View Merchant Payment','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(106,'Merchant Payment','add_merchant_payment',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(107,'Merchant Payment','edit_merchant_payment','Edit Merchant Payment','Edit Merchant Payment','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(108,'Merchant Payment','delete_merchant_payment',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(109,'Transaction','manage_transaction','Manage Transaction','Manage Transaction','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(110,'Deposit','manage_deposit','Manage Deposit','Manage Deposit','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(111,'Withdrawal','manage_withdrawal','Manage Withdrawal','Manage Withdrawal','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(112,'Transfer','manage_transfer','Manage Transfer','Manage Transfer','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(113,'Exchange','manage_exchange','Manage Exchange','Manage Exchange','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(115,'Request Payment','manage_request_payment','Manage Request Payment','Manage Request Payment','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(116,'Merchant','manage_merchant','Manage Merchant','Manage Merchant','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(117,'Merchant Payment','manage_merchant_payment','Manage Merchant Payment','Manage Merchant Payment','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(118,'User Group','view_group','View User Group','View User Group','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(119,'User Group','add_group','Add User Group','Add User Group','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(120,'User Group','edit_group','Edit User Group','Edit User Group','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(121,'User Group','delete_group','Delete User Group','Delete User Group','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(122,'Admins','view_admins','View Admins','View Admins','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(123,'Admins','add_admin','Add Admin','Add Admin','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(124,'Admins','edit_admin','Edit Admin','Edit Admin','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(125,'Admins','delete_admin','Delete Admin','Delete Admin','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(126,'Disputes','view_disputes','View Disputes','View Disputes','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(127,'Disputes','add_dispute',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(128,'Disputes','edit_dispute','Edit Dispute','Edit Dispute','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(129,'Disputes','delete_dispute',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(130,'Tickets','view_tickets','View Tickets','View Tickets','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(131,'Tickets','add_ticket','Add Ticket','Add Ticket','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(132,'Tickets','edit_ticket','Edit Ticket','Edit Ticket','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(133,'Tickets','delete_ticket','Delete Ticket','Delete Ticket','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(134,'Dispute','manage_dispute','Manage Dispute','Manage Dispute','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(135,'Ticket','manage_ticket','Manage Ticket','Manage Ticket','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(136,'Settings','manage_setting','Manage Settings','Manage Settings','User','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(137,'AppStore Credentials','view_appstore_credentials','View AppStore Credentials','View AppStore Credentials','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(138,'AppStore Credentials','add_appstore_credentials',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(139,'AppStore Credentials','edit_appstore_credentials','Edit AppStore Credentials','Edit AppStore Credentials','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(140,'AppStore Credentials','delete_appstore_credentials',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(145,'Merchant Groups','view_merchant_group','View Merchant Group','View Merchant Group','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(146,'Merchant Groups','add_merchant_group','Add Merchant Group','Add Merchant Group','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(147,'Merchant Groups','edit_merchant_group','Edit Merchant Group','Edit Merchant Group','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(148,'Merchant Groups','delete_merchant_group','Delete Merchant Group','Delete Merchant Group','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(149,'SMS Setting','view_sms_setting','View SMS Setting','View SMS Setting','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(150,'SMS Setting','add_sms_setting',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(151,'SMS Setting','edit_sms_setting','Edit SMS Setting','Edit SMS Setting','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(152,'SMS Setting','delete_sms_setting',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(153,'Sms Template','view_sms_template','View Sms Template','View Sms Template','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(154,'Sms Template','add_sms_template',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(155,'Sms Template','edit_sms_template','Edit Sms Template','Edit Sms Template','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(156,'Sms Template','delete_sms_template',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(157,'Identity Verificattion','view_identity_verfication','View Identity Verificattion','View Identity Verificattion','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(158,'Identity Verificattion','add_identity_verfication',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(159,'Identity Verificattion','edit_identity_verfication','Edit Identity Verificattion','Edit Identity Verificattion','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(160,'Identity Verificattion','delete_identity_verfication',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(161,'Address Verificattion','view_address_verfication','View Address Verificattion','View Address Verificattion','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(162,'Address Verificattion','add_address_verfication',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(163,'Address Verificattion','edit_address_verfication','Edit Address Verificattion','Edit Address Verificattion','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(164,'Address Verificattion','delete_address_verfication',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(165,'Enable WooCommerce','view_enable_woocommerce','View Enable WooCommerce','View Enable WooCommerce','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(166,'Enable WooCommerce','add_enable_woocommerce',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(167,'Enable WooCommerce','edit_enable_woocommerce','Edit Enable WooCommerce','Edit Enable WooCommerce','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(168,'Enable WooCommerce','delete_enable_woocommerce',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(169,'BlockIo Settings','view_blockio_settings','View BlockIo Settings','View BlockIo Settings','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(170,'BlockIo Settings','add_blockio_settings',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(171,'BlockIo Settings','edit_blockio_settings','Edit BlockIo Settings','Edit BlockIo Settings','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(172,'BlockIo Settings','delete_blockio_settings',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(173,'Crypto Transactions','view_crypto_transactions','View Crypto Transactions','View Crypto Transactions','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(174,'Crypto Transactions','add_crypto_transactions',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(175,'Crypto Transactions','edit_crypto_transactions',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(176,'Crypto Transactions','delete_crypto_transactions',NULL,NULL,'Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(177,'Cryptocard','manage_cryptocard','Manage Cryptocard','Manage Cryptocard','User',NULL,NULL),
+(178,'Cryptocard','view_cryptocard','View Cryptocard','View Cryptocard','Admin','2021-02-27 19:11:32','2021-02-27 19:11:32'),
+(179,'Cryptocard','add_cryptocard','Add Cryptocard','Add Cryptocard','Admin',NULL,NULL),
+(180,'Cryptocard','edit_cryptocard','Edit Cryptocard','Edit Cryptocard','Admin',NULL,NULL),
+(181,'Cryptocard','delete_cryptocard','Delete Cryptocard','Delete Cryptocard','Admin',NULL,NULL);
 
 /*Table structure for table `preferences` */
 
@@ -2398,13 +2436,9 @@ CREATE TABLE `sms_configs` (
   PRIMARY KEY (`id`),
   KEY `sms_configs_type_index` (`type`),
   KEY `sms_configs_status_index` (`status`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `sms_configs` */
-
-insert  into `sms_configs`(`id`,`type`,`credentials`,`status`,`created_at`,`updated_at`) values 
-(1,'twilio','','Inactive','2021-02-28 01:11:32','2021-02-28 01:11:32'),
-(2,'nexmo','','Inactive','2021-02-28 01:11:32','2021-02-28 01:11:32');
 
 /*Table structure for table `socials` */
 
@@ -3019,10 +3053,10 @@ CREATE TABLE `transactions` (
 /*Data for the table `transactions` */
 
 insert  into `transactions`(`id`,`user_id`,`end_user_id`,`currency_id`,`payment_method_id`,`merchant_id`,`bank_id`,`file_id`,`uuid`,`refund_reference`,`transaction_reference_id`,`transaction_type_id`,`user_type`,`email`,`phone`,`subtotal`,`percentage`,`charge_percentage`,`charge_fixed`,`total`,`note`,`status`,`created_at`,`updated_at`) values 
-(1,1,NULL,3,1,NULL,NULL,NULL,'5AE8427D75DAD',NULL,1,1,'registered',NULL,NULL,10.00000000,0.00000000,0.00000000,0.00000000,10.00000000,NULL,'Success','2021-02-28 01:38:28','2021-02-28 01:38:28'),
-(2,1,NULL,3,3,NULL,NULL,NULL,'378CE8EF35DEE',NULL,1,2,'registered',NULL,NULL,10.00000000,0.00000000,0.00000000,0.00000000,-10.00000000,NULL,'Blocked','2021-02-28 01:57:45','2021-02-28 03:58:08'),
-(3,3,NULL,3,1,NULL,NULL,NULL,'A6E63EA9467F1',NULL,2,1,'registered',NULL,NULL,100.00000000,0.00000000,0.00000000,0.00000000,100.00000000,NULL,'Success','2021-02-28 05:50:53','2021-02-28 05:50:53'),
-(4,NULL,3,5,9,NULL,NULL,NULL,'336ADC4E4A435',NULL,0,13,'registered',NULL,NULL,0.00002000,0.00000000,0.00000000,0.00003296,-0.00005296,NULL,'Pending','2021-02-28 05:51:53','2021-02-28 05:51:53');
+(1,1,NULL,3,1,NULL,NULL,NULL,'5AE8427D75DAD',NULL,1,1,'registered',NULL,NULL,10.00000000,0.00000000,0.00000000,0.00000000,10.00000000,NULL,'Success','2021-02-27 19:38:28','2021-02-27 19:38:28'),
+(2,1,NULL,3,3,NULL,NULL,NULL,'378CE8EF35DEE',NULL,1,2,'registered',NULL,NULL,10.00000000,0.00000000,0.00000000,0.00000000,-10.00000000,NULL,'Blocked','2021-02-27 19:57:45','2021-02-27 21:58:08'),
+(3,3,NULL,3,1,NULL,NULL,NULL,'A6E63EA9467F1',NULL,2,1,'registered',NULL,NULL,100.00000000,0.00000000,0.00000000,0.00000000,100.00000000,NULL,'Success','2021-02-27 23:50:53','2021-02-27 23:50:53'),
+(4,NULL,3,5,9,NULL,NULL,NULL,'336ADC4E4A435',NULL,0,13,'registered',NULL,NULL,0.00002000,0.00000000,0.00000000,0.00003296,-0.00005296,NULL,'Pending','2021-02-27 23:51:53','2021-02-27 23:51:53');
 
 /*Table structure for table `transfers` */
 
@@ -3090,10 +3124,10 @@ CREATE TABLE `user_details` (
 /*Data for the table `user_details` */
 
 insert  into `user_details`(`id`,`user_id`,`country_id`,`email_verification`,`phone_verification_code`,`two_step_verification_type`,`two_step_verification_code`,`two_step_verification`,`last_login_at`,`last_login_ip`,`city`,`state`,`address_1`,`address_2`,`default_currency`,`timezone`) values 
-(1,1,14,0,NULL,'disabled',NULL,0,'2021-02-28 01:23:50','77.119.131.153',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna'),
-(2,2,5,0,NULL,'disabled',NULL,0,'2021-02-28 04:23:10','77.119.131.153',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna'),
-(3,3,5,0,NULL,'disabled',NULL,0,'2021-03-26 19:00:56','178.113.93.66',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna'),
-(4,4,5,0,NULL,'disabled',NULL,0,'2021-04-02 05:09:19','127.0.0.1',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna');
+(1,1,14,0,NULL,'disabled',NULL,0,'2021-02-27 19:23:50','77.119.131.153',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna'),
+(2,2,5,0,NULL,'disabled',NULL,0,'2021-02-27 22:23:10','77.119.131.153',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna'),
+(3,3,5,0,NULL,'disabled',NULL,0,'2021-03-26 13:00:56','178.113.93.66',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna'),
+(4,4,5,0,NULL,'disabled',NULL,0,'2021-04-18 16:26:13','127.0.0.1',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna');
 
 /*Table structure for table `users` */
 
@@ -3130,10 +3164,10 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`id`,`role_id`,`type`,`first_name`,`last_name`,`formattedPhone`,`phone`,`google2fa_secret`,`defaultCountry`,`carrierCode`,`email`,`password`,`phrase`,`address_verified`,`identity_verified`,`status`,`remember_token`,`created_at`,`updated_at`,`picture`) values 
-(1,3,'merchant','Klaus','Testberg','+436641431116','6641431116',NULL,'at','43','test@gmail.com','$2y$10$BeLXG8kpfkDaUsoC0gsJw.6D3OFsLH3O0arQwMFKjGptsBRmlcMTm',NULL,0,0,'Active','qtP5RC6ThbovDs9W4ayBu5lRdFUJFgjkhKWOeRFKwyv2yW3KSC8mmoLiuNUA','2021-02-28 01:22:47','2021-02-28 01:22:47',''),
-(2,3,'merchant','Armino','Säure',NULL,'2015552093',NULL,'us','1','test2@gmail.com','$2y$10$sFjmR.fNoGKSK7UczUzLguFULKAdgNYMFZKtUg.PZxwM1rpzmyN0G',NULL,0,0,'Active','16PbjeMAcdqWkp3yIfFINPTjvLBcdFIE2PMTyUxwTh8B60jvDrm4b1DHPOZI','2021-02-28 02:00:20','2021-02-28 03:58:44',''),
-(3,3,'merchant','Tester2','Supermann','+436608038093','6608038093',NULL,'at','43','email@gmail.com','$2y$10$GZSnoi0YIirvATdsxjTPoeMxJyAVOXZaSj5D9IntjZgvlybmGplUy',NULL,0,0,'Active',NULL,'2021-02-28 05:47:47','2021-02-28 05:47:47',''),
-(4,2,'merchant','vladimir','kolyan',NULL,NULL,NULL,NULL,NULL,'vladimir.okulovich2019@mail.ru','$2y$10$GZSnoi0YIirvATdsxjTPoeMxJyAVOXZaSj5D9IntjZgvlybmGplUy',NULL,0,0,'Active','uNyGVNJjzoIhD07qQwFVp8geEuWLmbsiah2drVP6ZEaAlgUNDzGN6nGwdsSt','2021-03-02 14:31:53','2021-04-01 12:58:41','1617281921.png');
+(1,3,'merchant','Klaus','Testberg','+436641431116','6641431116',NULL,'at','43','test@gmail.com','$2y$10$BeLXG8kpfkDaUsoC0gsJw.6D3OFsLH3O0arQwMFKjGptsBRmlcMTm',NULL,0,0,'Active','qtP5RC6ThbovDs9W4ayBu5lRdFUJFgjkhKWOeRFKwyv2yW3KSC8mmoLiuNUA','2021-02-27 19:22:47','2021-02-27 19:22:47',''),
+(2,3,'merchant','Armino','Säure',NULL,'2015552093',NULL,'us','1','test2@gmail.com','$2y$10$sFjmR.fNoGKSK7UczUzLguFULKAdgNYMFZKtUg.PZxwM1rpzmyN0G',NULL,0,0,'Active','16PbjeMAcdqWkp3yIfFINPTjvLBcdFIE2PMTyUxwTh8B60jvDrm4b1DHPOZI','2021-02-27 20:00:20','2021-02-27 21:58:44',''),
+(3,3,'merchant','Tester2','Supermann','+436608038093','6608038093',NULL,'at','43','email@gmail.com','$2y$10$GZSnoi0YIirvATdsxjTPoeMxJyAVOXZaSj5D9IntjZgvlybmGplUy',NULL,0,0,'Active',NULL,'2021-02-27 23:47:47','2021-02-27 23:47:47',''),
+(4,2,'merchant','vladimir','kolyan',NULL,NULL,NULL,NULL,NULL,'vladimir.okulovich2019@mail.ru','$2y$10$GZSnoi0YIirvATdsxjTPoeMxJyAVOXZaSj5D9IntjZgvlybmGplUy',NULL,0,0,'Active','uNyGVNJjzoIhD07qQwFVp8geEuWLmbsiah2drVP6ZEaAlgUNDzGN6nGwdsSt','2021-03-02 08:31:53','2021-04-01 06:58:41','1617281921.png');
 
 /*Table structure for table `verify_users` */
 
@@ -3174,12 +3208,12 @@ CREATE TABLE `wallets` (
 /*Data for the table `wallets` */
 
 insert  into `wallets`(`id`,`user_id`,`currency_id`,`balance`,`is_default`,`created_at`,`updated_at`) values 
-(1,1,3,10.00000000,'Yes','2021-02-28 01:22:47','2021-02-28 03:58:08'),
-(2,2,3,0.00000000,'Yes','2021-02-28 02:00:20','2021-02-28 02:00:20'),
-(3,3,3,100.00000000,'Yes','2021-02-28 05:47:47','2021-02-28 05:50:53'),
-(4,3,5,0.00000000,'No','2021-02-28 05:47:47','2021-02-28 05:47:47'),
-(5,4,3,0.00000000,'Yes','2021-03-02 14:31:53','2021-03-02 14:31:53'),
-(6,4,5,0.00000000,'No','2021-03-02 14:31:53','2021-03-02 14:31:53');
+(1,1,3,10.00000000,'Yes','2021-02-27 19:22:47','2021-02-27 21:58:08'),
+(2,2,3,0.00000000,'Yes','2021-02-27 20:00:20','2021-02-27 20:00:20'),
+(3,3,3,100.00000000,'Yes','2021-02-27 23:47:47','2021-02-27 23:50:53'),
+(4,3,5,0.00000000,'No','2021-02-27 23:47:47','2021-02-27 23:47:47'),
+(5,4,3,0.00000000,'Yes','2021-03-02 08:31:53','2021-03-02 08:31:53'),
+(6,4,5,0.00000000,'No','2021-03-02 08:31:53','2021-03-02 08:31:53');
 
 /*Table structure for table `withdrawal_details` */
 
@@ -3208,7 +3242,7 @@ CREATE TABLE `withdrawal_details` (
 /*Data for the table `withdrawal_details` */
 
 insert  into `withdrawal_details`(`id`,`withdrawal_id`,`type`,`email`,`account_name`,`account_number`,`bank_branch_name`,`bank_branch_city`,`bank_branch_address`,`country`,`swift_code`,`bank_name`,`created_at`,`updated_at`) values 
-(1,1,3,'test@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2021-02-28 01:57:45','2021-02-28 01:57:45');
+(1,1,3,'test@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2021-02-27 19:57:45','2021-02-27 19:57:45');
 
 /*Table structure for table `withdrawals` */
 
@@ -3240,7 +3274,7 @@ CREATE TABLE `withdrawals` (
 /*Data for the table `withdrawals` */
 
 insert  into `withdrawals`(`id`,`user_id`,`currency_id`,`payment_method_id`,`uuid`,`charge_percentage`,`charge_fixed`,`subtotal`,`amount`,`payment_method_info`,`status`,`created_at`,`updated_at`) values 
-(1,1,3,3,'378CE8EF35DEE',0.00000000,0.00000000,10.00000000,10.00000000,'test@gmail.com','Blocked','2021-02-28 01:57:45','2021-02-28 03:58:08');
+(1,1,3,3,'378CE8EF35DEE',0.00000000,0.00000000,10.00000000,10.00000000,'test@gmail.com','Blocked','2021-02-27 19:57:45','2021-02-27 21:58:08');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

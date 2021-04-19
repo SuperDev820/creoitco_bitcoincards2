@@ -81,6 +81,11 @@ class User extends Authenticatable
         return $this->hasMany(Wallet::class);
     }
 
+    public function cryptocards()
+    {
+        return $this->hasMany(Cryptocard::class);
+    }
+
     public function request_payment()
     {
         return $this->hasOne(RequestPayment::class);
