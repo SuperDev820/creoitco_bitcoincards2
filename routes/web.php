@@ -126,6 +126,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['gue
     Route::post('cryptocards/update', 'CryptocardController@update');
     Route::get('cryptocards/delete/{id}', 'CryptocardController@destroy')->middleware(['permission:delete_cryptocard']);
     Route::get('cryptocards_user_search', 'CryptocardController@cryptocardsUserSearch');
+    Route::get('cryptocards_all_user_search', 'CryptocardController@cryptocardsAllUserSearch');
 
     // Deposits
     Route::get('deposits', 'DepositController@index')->middleware(['permission:view_deposit']);

@@ -71,7 +71,6 @@ class CryptocardController extends Controller
         {
             $rules = array(
                 'code'            => 'required',
-                'BTC'             => 'required|numeric',
                 'BTC_EUR'         => 'required|numeric',
                 'EUR'             => 'required|numeric',
                 'user'            => 'required',
@@ -80,7 +79,6 @@ class CryptocardController extends Controller
 
             $fieldNames = array(
                 'code'            => 'Code',
-                'BTC'             => 'BTC',
                 'BTC_EUR'         => 'BTC/EUR',
                 'EUR'             => 'Purchase Value',
                 'user'            => 'User',
@@ -135,7 +133,6 @@ class CryptocardController extends Controller
         {
             $rules = array(
                 'code'            => 'required',
-                'BTC'             => 'required|numeric',
                 'BTC_EUR'         => 'required|numeric',
                 'EUR'             => 'required|numeric',
                 'user'            => 'required',
@@ -144,7 +141,6 @@ class CryptocardController extends Controller
 
             $fieldNames = array(
                 'code'            => 'Code',
-                'BTC'             => 'BTC',
                 'BTC_EUR'         => 'BTC/EUR',
                 'EUR'             => 'Purchase Value',
                 'user'            => 'User',
@@ -212,6 +208,24 @@ class CryptocardController extends Controller
             'status' => 'fail',
         ];
         if ($user != null)
+        {
+            $res = [
+                'status' => 'success',
+                'data'   => $user,
+            ];
+        }
+        return json_encode($res);
+    }
+
+    public function cryptocardsAllUserSearch(Request $request)
+    {
+        $search = $request->search;
+        $user = User::where('first_name', 'LIKE', '%' . $search . '%')->orWhere('last_name', 'LIKE', '%' . $search . '%')->get();
+
+        $res = [
+            'status' => 'fail',
+        ];
+        if (count($user)>0)
         {
             $res = [
                 'status' => 'success',

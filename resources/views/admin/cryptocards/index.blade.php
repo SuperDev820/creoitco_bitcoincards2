@@ -40,7 +40,7 @@
                             <div class="col-md-2">
                                 <label>User</label>
                                 <input id="user_input" type="text" name="user" placeholder="Enter Name" class="form-control" value="{{ empty($user) ?  $user : $getName->first_name.' '.$getName->last_name }}"
-                                {{  isset($getName) && ($getName->id == $user) ? 'selected' : '' }}>
+                                {{  isset($getName) && ($getName->id == $user) ? 'selected' : '' }}
                                 <span id="error-user"></span>
                             </div>
 

@@ -18,7 +18,7 @@ class CreateCryptocardsTable extends Migration
 
             $table->text('code')->nullable();
 
-            $table->float('BTC');
+            $table->float('BTC', 8, 4);
 
             $table->float('BTC_EUR');
 

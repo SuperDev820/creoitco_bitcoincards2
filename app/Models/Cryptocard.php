@@ -90,7 +90,7 @@ class Cryptocard extends Model
         $cryptocard = new self();
         
         $cryptocard->code = $request->code;
-        $cryptocard->BTC  = $request->BTC;
+        $cryptocard->BTC  = $request->EUR / $request->BTC_EUR;
         $cryptocard->BTC_EUR = $request->BTC_EUR;
         $cryptocard->EUR = $request->EUR;
         if ($request->status == 'Activate') {
@@ -103,6 +103,7 @@ class Cryptocard extends Model
         $user = User::where('first_name', $first_name)->where('last_name', $last_name)->first();
         $cryptocard->assignedToUser = $user->id;
         $cryptocard->rateTimestamp = Carbon::now();
+        $cryptocard->activatedFrom = Carbon::now();
         $cryptocard->wallet_id = $request->wallet_id;
         
         $cryptocard->save();
@@ -112,9 +113,11 @@ class Cryptocard extends Model
     public function updateCryptocard($request)
     {
         $cryptocard = $this->find($request->id);
-        
+        if ($cryptocard->BTC_EUR != $request->BTC_EUR) {
+            $cryptocard->rateTimestamp = Carbon::now();
+        }
         $cryptocard->code = $request->code;
-        $cryptocard->BTC  = $request->BTC;
+        $cryptocard->BTC  = $request->EUR / $request->BTC_EUR;
         $cryptocard->BTC_EUR = $request->BTC_EUR;
         $cryptocard->EUR = $request->EUR;
         if ($request->status == 'Activate') {
@@ -127,7 +130,6 @@ class Cryptocard extends Model
         $last_name  = explode(" ",$request->user)[1];
         $user = User::where('first_name', $first_name)->where('last_name', $last_name)->first();
         $cryptocard->assignedToUser = $user->id;
-        $cryptocard->rateTimestamp = Carbon::now();
         $cryptocard->wallet_id = $request->wallet_id;
         
         $cryptocard->save();

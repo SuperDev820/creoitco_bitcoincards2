@@ -30,7 +30,7 @@ CREATE TABLE `activity_logs` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `activity_logs_user_id_index` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 /*Data for the table `activity_logs` */
 
@@ -80,7 +80,9 @@ insert  into `activity_logs`(`id`,`user_id`,`type`,`ip_address`,`browser_agent`,
 (43,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-17 07:33:53','2021-04-17 07:33:53'),
 (44,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-18 16:26:13','2021-04-18 16:26:13'),
 (45,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-18 16:26:36','2021-04-18 16:26:36'),
-(46,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-19 05:23:19','2021-04-19 05:23:19');
+(46,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-19 05:23:19','2021-04-19 05:23:19'),
+(47,4,'User','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36','2021-04-19 07:12:13','2021-04-19 07:12:13'),
+(48,3,'Admin','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36','2021-04-21 02:37:40','2021-04-21 02:37:40');
 
 /*Table structure for table `admins` */
 
@@ -572,7 +574,7 @@ DROP TABLE IF EXISTS `cryptocards`;
 CREATE TABLE `cryptocards` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `code` text DEFAULT NULL,
-  `BTC` double(8,2) NOT NULL,
+  `BTC` float(8,4) NOT NULL,
   `BTC_EUR` double(8,2) NOT NULL,
   `EUR` double(8,2) NOT NULL,
   `rateTimestamp` datetime NOT NULL,
@@ -588,13 +590,14 @@ CREATE TABLE `cryptocards` (
   KEY `cryptocards_assignedtouser_index` (`assignedToUser`),
   CONSTRAINT `cryptocards_assignedtouser_foreign` FOREIGN KEY (`assignedToUser`) REFERENCES `users` (`id`),
   CONSTRAINT `cryptocards_wallet_id_foreign` FOREIGN KEY (`wallet_id`) REFERENCES `wallets` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 /*Data for the table `cryptocards` */
 
 insert  into `cryptocards`(`id`,`code`,`BTC`,`BTC_EUR`,`EUR`,`rateTimestamp`,`activatedFrom`,`status`,`activatedBy`,`assignedToUser`,`wallet_id`,`created_at`,`updated_at`) values 
-(1,'7AD67DHJ8',0.00,45315.00,100.00,'2021-03-26 19:50:52','2021-03-26 20:49:56',1,1,2,2,NULL,NULL),
-(2,'YD787DkJK8',0.00,45319.00,200.00,'2021-03-27 00:39:14','2021-03-27 01:38:14',1,1,1,1,NULL,NULL);
+(1,'7AD67DHJ8',0.0022,45315.00,100.00,'2021-03-26 19:50:52','2021-04-21 04:02:58',1,1,2,2,NULL,'2021-04-21 04:02:58'),
+(2,'YD787DkJK8',0.0044,45319.00,200.00,'2021-03-27 00:39:14','2021-04-21 04:02:48',1,1,1,1,NULL,'2021-04-21 04:02:48'),
+(5,'sdf4325234',2.7818,12.22,34.00,'2021-04-21 05:12:27','2021-04-21 05:12:27',1,0,4,2,'2021-04-21 05:12:27','2021-04-21 05:12:27');
 
 /*Table structure for table `currencies` */
 
@@ -3127,7 +3130,7 @@ insert  into `user_details`(`id`,`user_id`,`country_id`,`email_verification`,`ph
 (1,1,14,0,NULL,'disabled',NULL,0,'2021-02-27 19:23:50','77.119.131.153',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna'),
 (2,2,5,0,NULL,'disabled',NULL,0,'2021-02-27 22:23:10','77.119.131.153',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna'),
 (3,3,5,0,NULL,'disabled',NULL,0,'2021-03-26 13:00:56','178.113.93.66',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna'),
-(4,4,5,0,NULL,'disabled',NULL,0,'2021-04-18 16:26:13','127.0.0.1',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna');
+(4,4,5,0,NULL,'disabled',NULL,0,'2021-04-19 07:12:13','127.0.0.1',NULL,NULL,NULL,NULL,NULL,'Europe/Vienna');
 
 /*Table structure for table `users` */
 

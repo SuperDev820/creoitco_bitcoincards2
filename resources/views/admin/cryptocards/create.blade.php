@@ -5,6 +5,8 @@
 @section('head_style')
   <!-- intlTelInput -->
   <link rel="stylesheet" type="text/css" href="{{ asset('backend/intl-tel-input-13.0.0/intl-tel-input-13.0.0/build/css/intlTelInput.css')}}">
+  <!-- jquery-ui-1.12.1 -->
+  <link rel="stylesheet" type="text/css" href="{{ asset('backend/jquery-ui-1.12.1/jquery-ui.min.css')}}">
 @endsection
 
 @section('page_content')
@@ -26,21 +28,6 @@
                                             <strong class="text-danger">{{ $errors->first('code') }}</strong>
                                         </span>
                                     @endif
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="control-label col-sm-3" for="BTC">BTC</label>
-                                <div class="col-sm-6">
-                                    <input type="text" class="form-control" name="BTC" value="" id="BTC"
-                                    oninput="restrictNumberToEightdecimals(this)">
-                                    @if($errors->has('BTC'))
-                                        <span class="error">
-                                            <strong class="text-danger">{{ $errors->first('BTC') }}</strong>
-                                        </span>
-                                    @endif
-                                    <div class="clearfix"></div>
-                                    <small class="form-text text-muted"><strong>*Allowed upto 8 decimal places.</strong></small>
                                 </div>
                             </div>
 
@@ -94,8 +81,10 @@
                                             <strong class="text-danger">{{ $errors->first('user') }}</strong>
                                         </span>
                                     @endif
+                                    <span id="error-user"></span>
                                 </div>
                             </div>
+                            <input id="user_id" type="hidden" name="user_id" value="{{ isset($user) ? $user->id : '' }}">
 
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="wallet_id">Wallet</label>
@@ -128,6 +117,8 @@
 <!-- jquery.validate additional-methods -->
 <script src="{{ asset('dist/js/jquery-validation-1.17.0/dist/additional-methods.min.js') }}" type="text/javascript"></script>
 
+<!-- jquery-ui-1.12.1 -->
+<script src="{{ asset('backend/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
 @include('common.restrict_number_to_eight_decimal')
 
 <script type="text/javascript">
@@ -190,6 +181,74 @@
             });
             form.submit();
         }
+    });
+
+    $(document).ready(function() {
+        $("#user").on('keyup keypress', function(e) {
+            if (e.type=="keyup" || e.type=="keypress")
+            {
+                var user_input = $('#user').val();
+                if(user_input.length === 0)
+                {
+                    $('#user_id').val('');
+                    $('#error-user').html('');
+                }
+            }
+        });
+
+        $('#user').autocomplete(
+        {
+            source:function(req,res)
+            {
+                if (req.term.length > 0)
+                {
+                    $.ajax({
+                        url:'{{url('admin/cryptocards_all_user_search')}}',
+                        dataType:'json',
+                        type:'get',
+                        data:{
+                            search:req.term
+                        },
+                        success:function (response)
+                        {
+                            // console.log(response);
+                            // console.log(req.term.length);
+
+                            if(response.status == 'success')
+                            {
+                                res($.map(response.data, function (item)
+                                {
+                                    return {
+                                            id : item.id, //user_id is defined
+                                            first_name : item.first_name, //first_name is defined
+                                            last_name : item.last_name, //last_name is defined
+                                            value: item.first_name + ' ' + item.last_name //don't change value
+                                        }
+                                    }
+                                    ));
+                            }
+                            else if(response.status == 'fail')
+                            {
+                                $('#error-user').addClass('text-danger').html('User Does Not Exist!');
+                            }
+                        }
+                    })
+                }
+                else
+                {
+                    console.log(req.term.length);
+                    $('#user_id').val('');
+                }
+            },
+            select: function (event, ui)
+            {
+                var e = ui.item;
+                $('#error-user').html('');
+                $('#user_id').val(e.id);
+            },
+            minLength: 0,
+            autoFocus: true
+        });
     });
 
 </script>
