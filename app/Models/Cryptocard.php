@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use Carbon\Carbon;
+use Auth;
 
 class Cryptocard extends Model
 {
@@ -95,6 +96,7 @@ class Cryptocard extends Model
         $cryptocard->EUR = $request->EUR;
         if ($request->status == 'Activate') {
             $cryptocard->status = 1;
+            $cryptocard->activatedBy = auth()->user()->id;
         } else if ($request->status == 'Deactivate') {
             $cryptocard->status = 2;
         }
@@ -122,6 +124,7 @@ class Cryptocard extends Model
         $cryptocard->EUR = $request->EUR;
         if ($request->status == 'Activate') {
             $cryptocard->status = 1;
+            $cryptocard->activatedBy = auth()->user()->id;
             $cryptocard->activatedFrom = Carbon::now();
         } else if ($request->status == 'Deactivate') {
             $cryptocard->status = 2;

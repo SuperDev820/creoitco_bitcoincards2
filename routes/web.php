@@ -577,6 +577,13 @@ Route::group(['middleware' => ['guest:users', 'locale', 'twoFa', 'check-user-ina
         Route::match(array('GET', 'POST'), 'cryptocards', 'CryptocardController@index');
     });
 
+    Route::group(['middleware' => ['permission:manage_cryptocard']], function ()
+    {
+        Route::get('addCard', 'CryptocardController@addCryptocard');
+        Route::get('getCard', 'CryptocardController@getCryptocard');
+        Route::get('activateCard', 'CryptocardController@activateCryptocard');
+    });
+
     // Currency Exchange - Without Suspend Middleware
     Route::group(['middleware' => ['permission:manage_exchange']], function ()
     {
