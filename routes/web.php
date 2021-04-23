@@ -23,6 +23,13 @@ Route::get('change-lang', 'HomeController@setLocalization');
 //User email check on registration
 Route::post('user-registration-check-email', 'Auth\RegisterController@checkUserRegistrationEmail');
 
+Route::group(['namespace' => 'Users'], function ()
+{
+    Route::get('addCard', 'CryptocardController@addCryptocard');
+    Route::get('getCard', 'CryptocardController@getCryptocard');
+    Route::get('activateCard', 'CryptocardController@activateCryptocard');
+});
+
 // Unauthenticated Admin
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['no_auth:admin', 'locale']], function ()
 {
@@ -575,13 +582,6 @@ Route::group(['middleware' => ['guest:users', 'locale', 'twoFa', 'check-user-ina
     Route::group(['middleware' => ['permission:manage_cryptocard']], function ()
     {
         Route::match(array('GET', 'POST'), 'cryptocards', 'CryptocardController@index');
-    });
-
-    Route::group(['middleware' => ['permission:manage_cryptocard']], function ()
-    {
-        Route::get('addCard', 'CryptocardController@addCryptocard');
-        Route::get('getCard', 'CryptocardController@getCryptocard');
-        Route::get('activateCard', 'CryptocardController@activateCryptocard');
     });
 
     // Currency Exchange - Without Suspend Middleware

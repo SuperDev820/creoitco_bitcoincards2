@@ -7,6 +7,7 @@ use App\Models\Setting;
 use App\Models\Cryptocard;
 use App\Models\Transfer;
 use App\Models\Wallet;
+use App\Models\User;
 use App\Repositories\CryptoCurrencyRepository;
 use Auth;
 use Carbon\Carbon;
@@ -67,26 +68,25 @@ class CryptocardController extends Controller
 
     public function addCryptocard(Request $request)
     {
-        if ($request->code) {
+        if ($request->code && $request->senderId) {
             $cryptocards = Cryptocard::where('code', $request->code)->get();
             if (count($cryptocards) > 0) {
-                return response()->json([
-                    'message' => 'The code already exist.',
-                ], 300);
+                return "error";
+            }
+            $user = User::where('id', $request->senderId)->get();
+            if (count($user) == 0) {
+                return "error";
             }
             $cryptocard = new Cryptocard;
             $cryptocard->code = $request->code;
             $cryptocard->status = 2;
-            $cryptocard->assignedToUser = auth()->user()->id;
+            $cryptocard->assignedToUser = $request->senderId;
             $cryptocard->save();
             return response()->json([
-                'message' => 'success',
                 'cryptocard' => $cryptocard,
             ], 200);
         }
-        return response()->json([
-            'message' => 'failed',
-        ], 300);
+        return "error";
     }
 
     public function getCryptocard(Request $request)
@@ -94,19 +94,15 @@ class CryptocardController extends Controller
         if ($request->code) {
             $cryptocard = Cryptocard::where('code', $request->code)->first();
             return response()->json([
-                'message' => 'success',
                 'cryptocard' => $cryptocard,
             ], 200);
         } else if ($request->id) {
             $cryptocard = Cryptocard::find($request->id);
             return response()->json([
-                'message' => 'success',
                 'cryptocard' => $cryptocard,
             ], 200);
         }
-        return response()->json([
-            'message' => 'failed',
-        ], 300);
+        return "error";
     }
 
     public function activateCryptocard(Request $request)
@@ -114,35 +110,29 @@ class CryptocardController extends Controller
         if ($request->code) {
             $cryptocard = Cryptocard::where('code', $request->code)->first();
             if ($cryptocard == null) {
-                return response()->json([
-                    'message' => 'Such card does not exist',
-                ], 300);
+                return "error";
             }
-            if ($request->BTC_EUR && $request->purchase_value) {
+            if ($request->BTC_EUR && $request->purchase_value && $request->senderId) {
                 $cryptocard->status = 1;
                 $cryptocard->EUR = $request->purchase_value;
                 $cryptocard->BTC_EUR = $request->BTC_EUR;
                 $cryptocard->BTC = $request->purchase_value / $request->BTC_EUR;
                 $cryptocard->activatedFrom = Carbon::now();
                 $cryptocard->rateTimestamp = Carbon::now();
-                $cryptocard->assignedToUser = auth()->user()->id;
-                $wallet = Wallet::where('user_id', auth()->user()->id)->first();
+                $cryptocard->assignedToUser = $request->senderId;
+                $cryptocard->activatedBy = $request->senderId;
+                $wallet = Wallet::where('user_id', $request->senderId)->first();
                 $cryptocard->wallet_id = $wallet->id;
-                $cryptocard->activatedBy = auth()->user()->id;
                 $cryptocard->save();
 
                 return response()->json([
-                    'message' => 'Successfully updated',
                     'cryptocard' => $cryptocard,
                 ], 200);
             }
             return response()->json([
                 'message' => 'Please put required parameters',
-                'cryptocard' => $cryptocard,
             ], 300);
         }
-        return response()->json([
-            'message' => 'failed',
-        ], 300);
+        return "error";
     }
 }
